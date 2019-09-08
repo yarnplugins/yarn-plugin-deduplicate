@@ -1,5 +1,6 @@
 {
   "name": "yarn-plugin-deduplicate",
+  "private": true,
   "main": "./sources/index.ts",
   "dependencies": {
     "@yarnpkg/cli": "^2.0.0-rc.4",
