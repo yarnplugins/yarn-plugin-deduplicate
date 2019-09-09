@@ -40,6 +40,8 @@ yarnPath: yarn.js`,
 			{ encoding: "utf8" }
 		);
 		childProcess.execSync(`git init`, { cwd: tmpdir });
+		childProcess.execSync(`git config user.name "jest"`, { cwd: tmpdir });
+		childProcess.execSync(`git config user.email "jest@example.com"`, { cwd: tmpdir });
 		childProcess.execSync(`git add -A`, { cwd: tmpdir });
 		childProcess.execSync(`git commit -m 'Initial commit'`, { cwd: tmpdir });
 
