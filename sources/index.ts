@@ -1,11 +1,9 @@
-import {Plugin}    from '@yarnpkg/core';
+import { Plugin } from "@yarnpkg/core";
 
-import deduplicate from './commands/deduplicate';
+import deduplicate from "./commands/deduplicate";
 
 const plugin: Plugin = {
-  commands: [
-    deduplicate,
-  ],
+	commands: [deduplicate]
 };
 
 // eslint-disable-next-line arca/no-default-export

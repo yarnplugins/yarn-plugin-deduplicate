@@ -5559,6 +5559,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"prettier@npm:^1.18.2":
+  version: 1.18.2
+  resolution: "prettier@npm:1.18.2"
+  bin:
+    prettier: ./bin-prettier.js
+  checksum: 103eff3866671cba04cb2e72bfb3762ad372a596ee4b9d8b24627f1ef11a52584777beb150fb007ab4eaf1d1ba9182bc24dc744fe966c7f723d02435e57f728c
+  languageName: node
+  linkType: hard
+
 "pretty-bytes@npm:^5.1.0":
   version: 5.3.0
   resolution: "pretty-bytes@npm:5.3.0"
@@ -7570,6 +7579,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     clipanion: "npm:^2.1.1"
     eslint: "npm:^6.3.0"
     jest: "npm:^24.9.0"
+    prettier: "npm:^1.18.2"
     rimraf: "npm:^3.0.0"
     semver: "npm:^6.3.0"
     typescript: "npm:^3.6.2"

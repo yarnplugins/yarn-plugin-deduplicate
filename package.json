@@ -1,28 +1,35 @@
 {
-  "name": "yarn-plugin-deduplicate",
-  "version": "0.1.0",
-  "private": true,
-  "main": "./sources/index.ts",
-  "dependencies": {
-    "@yarnpkg/cli": "^2.0.0-rc.4",
-    "@yarnpkg/core": "^2.0.0-rc.5",
-    "clipanion": "^2.1.1",
-    "semver": "^6.3.0"
-  },
-  "scripts": {
-    "build": "builder build plugin",
-    "prerelease": "yarn build",
-    "release": "cp bundles/@yarnpkg/plugin-deduplicate.js bin/@yarnpkg/plugin-deduplicate.js",
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@types/node": "^12.7.4",
-    "@types/semver": "^6.0.2",
-    "@yarnpkg/builder": "^2.0.0-rc.4",
-    "@yarnpkg/pnpify": "^2.0.0-rc.3",
-    "eslint": "^6.3.0",
-    "jest": "^24.9.0",
-    "rimraf": "^3.0.0",
-    "typescript": "^3.6.2"
-  }
+	"name": "yarn-plugin-deduplicate",
+	"version": "0.1.0",
+	"private": true,
+	"main": "./sources/index.ts",
+	"dependencies": {
+		"@yarnpkg/cli": "^2.0.0-rc.4",
+		"@yarnpkg/core": "^2.0.0-rc.5",
+		"clipanion": "^2.1.1",
+		"semver": "^6.3.0"
+	},
+	"scripts": {
+		"build": "builder build plugin",
+		"format:files": "prettier --ignore-path ./.eslintignore \"**/*.{js,json,ts,yml}\"",
+		"format": "yarn format:files --write",
+		"format:ci": "yarn format:files --check",
+		"prerelease": "yarn build",
+		"release": "cp bundles/@yarnpkg/plugin-deduplicate.js bin/@yarnpkg/plugin-deduplicate.js",
+		"test": "jest"
+	},
+	"prettier": {
+		"useTabs": true
+	},
+	"devDependencies": {
+		"@types/node": "^12.7.4",
+		"@types/semver": "^6.0.2",
+		"@yarnpkg/builder": "^2.0.0-rc.4",
+		"@yarnpkg/pnpify": "^2.0.0-rc.3",
+		"eslint": "^6.3.0",
+		"jest": "^24.9.0",
+		"prettier": "^1.18.2",
+		"rimraf": "^3.0.0",
+		"typescript": "^3.6.2"
+	}
 }

@@ -1,8 +1,8 @@
 {
-  "name": "before",
-  "private": true,
-  "dependencies": {
-    "@babel/runtime": "^7.5.0",
-    "@testing-library/dom": "^6.2.0"
-  }
+	"name": "before",
+	"private": true,
+	"dependencies": {
+		"@babel/runtime": "^7.5.0",
+		"@testing-library/dom": "^6.2.0"
+	}
 }

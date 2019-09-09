@@ -136,6 +136,7 @@ function $$SETUP_STATE(hydrateRuntimeState) {
             ["clipanion", "npm:2.1.1"],
             ["eslint", "npm:6.3.0"],
             ["jest", "npm:24.9.0"],
+            ["prettier", "npm:1.18.2"],
             ["rimraf", "npm:3.0.0"],
             ["semver", "npm:6.3.0"],
             ["typescript", "npm:3.6.2"]
@@ -5792,6 +5793,14 @@ function $$SETUP_STATE(hydrateRuntimeState) {
           ]
         }]
       ]],
+      ["prettier", [
+        ["npm:1.18.2", {
+          "packageLocation": "./.yarn/cache/prettier-npm-1.18.2-df81eda876.zip/node_modules/prettier/",
+          "packageDependencies": [
+            ["prettier", "npm:1.18.2"]
+          ]
+        }]
+      ]],
       ["pretty-bytes", [
         ["npm:5.3.0", {
           "packageLocation": "./.yarn/cache/pretty-bytes-npm-5.3.0-ba606f0c99.zip/node_modules/pretty-bytes/",
@@ -7805,6 +7814,7 @@ function $$SETUP_STATE(hydrateRuntimeState) {
             ["clipanion", "npm:2.1.1"],
             ["eslint", "npm:6.3.0"],
             ["jest", "npm:24.9.0"],
+            ["prettier", "npm:1.18.2"],
             ["rimraf", "npm:3.0.0"],
             ["semver", "npm:6.3.0"],
             ["typescript", "npm:3.6.2"]
