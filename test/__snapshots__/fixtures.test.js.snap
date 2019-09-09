@@ -67,14 +67,14 @@ index 9b3bc72..358b9cb 100644
 exports[`fixtures fixture test-a 2`] = `
 "➤ YN0000: ┌ deduplication step
 ➤ YN0000: │ @babel/runtime@npm:^7.5.0 can be deduplicated from runtime@7.5.0 to runtime@7.6.0
-➤ YN0000: └ Completed in 0s
+➤ YN0000: └ Completed
 ➤ YN0000: ┌ Resolution step
-➤ YN0000: └ Completed in 0.01s
+➤ YN0000: └ Completed
 ➤ YN0000: ┌ Fetch step
 ➤ YN0019: │ @babel-runtime-npm-7.5.0-7f6c1aead4.zip appears to be unused - removing
-➤ YN0000: └ Completed in 0.02s
+➤ YN0000: └ Completed
 ➤ YN0000: ┌ Link step
-➤ YN0000: └ Completed in 0.05s
-➤ YN0000: Done in 0.09s
+➤ YN0000: └ Completed
+➤ YN0000: Done
 "
 `;

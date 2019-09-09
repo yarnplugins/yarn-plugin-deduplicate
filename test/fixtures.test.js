@@ -32,6 +32,7 @@ describe("fixtures", () => {
 		await fs.writeFile(
 			path.join(tmpdir, ".yarnrc.yml"),
 			`
+enableTimers: false
 plugins:
   - yarn-deduplicate.js
 
