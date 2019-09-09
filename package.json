@@ -16,8 +16,11 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@types/node": "^12.7.4",
     "@types/semver": "^6.0.2",
     "@yarnpkg/builder": "^2.0.0-rc.4",
+    "@yarnpkg/pnpify": "^2.0.0-rc.3",
+    "eslint": "^6.3.0",
     "jest": "^24.9.0",
     "rimraf": "^3.0.0",
     "typescript": "^3.6.2"
