@@ -10,6 +10,8 @@
   },
   "scripts": {
     "build": "builder build plugin",
+    "prerelease": "yarn build",
+    "release": "cp bundles/@yarnpkg/plugin-deduplicate.js bin/@yarnpkg/plugin-deduplicate.js",
     "test": "jest"
   },
   "devDependencies": {
