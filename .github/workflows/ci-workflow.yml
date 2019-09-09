@@ -48,16 +48,12 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - 8
           - 10
           - 12
         platform:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-        exclude:
-          - node: 8
-            platform: windows-latest
 
     name: "${{matrix.platform}} w/ Node.js ${{matrix.node}}.x"
     runs-on: ${{matrix.platform}}
