@@ -13,7 +13,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.5.5":
+"@babel/core@npm:^7.1.0, @babel/core@npm:^7.5.5":
   version: 7.6.0
   resolution: "@babel/core@npm:7.6.0"
   dependencies:
@@ -35,7 +35,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.6.0":
+"@babel/generator@npm:^7.4.0, @babel/generator@npm:^7.6.0":
   version: 7.6.0
   resolution: "@babel/generator@npm:7.6.0"
   dependencies:
@@ -159,7 +159,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.6.0":
+"@babel/parser@npm:^7.1.0, @babel/parser@npm:^7.4.3, @babel/parser@npm:^7.6.0":
   version: 7.6.0
   resolution: "@babel/parser@npm:7.6.0"
   bin:
@@ -190,6 +190,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/plugin-syntax-object-rest-spread@npm:^7.0.0":
+  version: 7.2.0
+  resolution: "@babel/plugin-syntax-object-rest-spread@npm:7.2.0"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.0.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: 48137497b3175d227c5979cf25d7d9b0e4d623cddbbf49153fd6535b30755a224a14955586fd399f2141126a5b664018e71af2458516dc3b3be521b01c97f796
+  languageName: node
+  linkType: hard
+
 "@babel/plugin-transform-parameters@npm:^7.4.4":
   version: 7.4.4
   resolution: "@babel/plugin-transform-parameters@npm:7.4.4"
@@ -212,7 +223,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/template@npm:^7.1.0, @babel/template@npm:^7.4.4, @babel/template@npm:^7.6.0":
+"@babel/template@npm:^7.1.0, @babel/template@npm:^7.4.0, @babel/template@npm:^7.4.4, @babel/template@npm:^7.6.0":
   version: 7.6.0
   resolution: "@babel/template@npm:7.6.0"
   dependencies:
@@ -223,7 +234,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^7.4.4, @babel/traverse@npm:^7.6.0":
+"@babel/traverse@npm:^7.1.0, @babel/traverse@npm:^7.4.3, @babel/traverse@npm:^7.4.4, @babel/traverse@npm:^7.6.0":
   version: 7.6.0
   resolution: "@babel/traverse@npm:7.6.0"
   dependencies:
@@ -240,7 +251,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.0.0, @babel/types@npm:^7.4.4, @babel/types@npm:^7.5.5, @babel/types@npm:^7.6.0":
+"@babel/types@npm:^7.0.0, @babel/types@npm:^7.3.0, @babel/types@npm:^7.4.0, @babel/types@npm:^7.4.4, @babel/types@npm:^7.5.5, @babel/types@npm:^7.6.0":
   version: 7.6.1
   resolution: "@babel/types@npm:7.6.1"
   dependencies:
@@ -248,6 +259,186 @@ __metadata:
     lodash: "npm:^4.17.13"
     to-fast-properties: "npm:^2.0.0"
   checksum: ecb16e3ecc0ca1f0f31f9e2d4d36ebe8968c72b02bf3cce1485cfc631f0c9145ccdbaec8d31c3f30866de274fd5c31d28dce5b645c7a57a9af37fa2dc081b72b
+  languageName: node
+  linkType: hard
+
+"@cnakazawa/watch@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@cnakazawa/watch@npm:1.0.3"
+  dependencies:
+    exec-sh: "npm:^0.3.2"
+    minimist: "npm:^1.2.0"
+  bin:
+    watch: ./cli.js
+  checksum: c54c3eee8c1116297c940f039d2936fff32126161d65d2b4c0ade734813e24d99ad5922843b8ee482f903fb3590521ca283bdbb96c674ad7fc5b017e15bd22bf
+  languageName: node
+  linkType: hard
+
+"@jest/console@npm:^24.7.1, @jest/console@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/console@npm:24.9.0"
+  dependencies:
+    "@jest/source-map": "npm:^24.9.0"
+    chalk: "npm:^2.0.1"
+    slash: "npm:^2.0.0"
+  checksum: 9ee584a0b7400da532904da0bd7424e0b94eda704282dda49b293c22c91fe7ecb0f36f7ad6194ac4bccb0fb8b438d69d61da918c02df983b9af10d41a808ef01
+  languageName: node
+  linkType: hard
+
+"@jest/core@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/core@npm:24.9.0"
+  dependencies:
+    "@jest/console": "npm:^24.7.1"
+    "@jest/reporters": "npm:^24.9.0"
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/transform": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    ansi-escapes: "npm:^3.0.0"
+    chalk: "npm:^2.0.1"
+    exit: "npm:^0.1.2"
+    graceful-fs: "npm:^4.1.15"
+    jest-changed-files: "npm:^24.9.0"
+    jest-config: "npm:^24.9.0"
+    jest-haste-map: "npm:^24.9.0"
+    jest-message-util: "npm:^24.9.0"
+    jest-regex-util: "npm:^24.3.0"
+    jest-resolve: "npm:^24.9.0"
+    jest-resolve-dependencies: "npm:^24.9.0"
+    jest-runner: "npm:^24.9.0"
+    jest-runtime: "npm:^24.9.0"
+    jest-snapshot: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jest-validate: "npm:^24.9.0"
+    jest-watcher: "npm:^24.9.0"
+    micromatch: "npm:^3.1.10"
+    p-each-series: "npm:^1.0.0"
+    realpath-native: "npm:^1.1.0"
+    rimraf: "npm:^2.5.4"
+    slash: "npm:^2.0.0"
+    strip-ansi: "npm:^5.0.0"
+  checksum: a33335c224988235bb6cd8f6be5f6c0bbfba550d613b48b150f584122ce95f6b49005d6306684c0213bf2792c6d2aec5411d556a5d8994964fa6579d9802c0de
+  languageName: node
+  linkType: hard
+
+"@jest/environment@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/environment@npm:24.9.0"
+  dependencies:
+    "@jest/fake-timers": "npm:^24.9.0"
+    "@jest/transform": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    jest-mock: "npm:^24.9.0"
+  checksum: f7e1d9564b5cb34d9310cf612024d7aa2d2a91b6ed7fca864378d790b3f3e99b5193c2737f193ed15b1a0cf3178ab428b5c817318b8cd4eda8c814c48799dfc6
+  languageName: node
+  linkType: hard
+
+"@jest/fake-timers@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/fake-timers@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    jest-message-util: "npm:^24.9.0"
+    jest-mock: "npm:^24.9.0"
+  checksum: 94c2ada792977a71e366a702b5a9116ea00405555e658bdc5a65d2e0521f3f26180f4940441b68a5a5c43adc271f04af4bbb685f294d21626315f5012a41f962
+  languageName: node
+  linkType: hard
+
+"@jest/reporters@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/reporters@npm:24.9.0"
+  dependencies:
+    "@jest/environment": "npm:^24.9.0"
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/transform": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    chalk: "npm:^2.0.1"
+    exit: "npm:^0.1.2"
+    glob: "npm:^7.1.2"
+    istanbul-lib-coverage: "npm:^2.0.2"
+    istanbul-lib-instrument: "npm:^3.0.1"
+    istanbul-lib-report: "npm:^2.0.4"
+    istanbul-lib-source-maps: "npm:^3.0.1"
+    istanbul-reports: "npm:^2.2.6"
+    jest-haste-map: "npm:^24.9.0"
+    jest-resolve: "npm:^24.9.0"
+    jest-runtime: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jest-worker: "npm:^24.6.0"
+    node-notifier: "npm:^5.4.2"
+    slash: "npm:^2.0.0"
+    source-map: "npm:^0.6.0"
+    string-length: "npm:^2.0.0"
+  checksum: 747c0276eae8abb9735a88c0b67df1fa24bd46ec52b2d446e236a4f691738a2497d9c52b4ede925b934f3eee130c643a893283dda0db4c3ad66d972f0dea129a
+  languageName: node
+  linkType: hard
+
+"@jest/source-map@npm:^24.3.0, @jest/source-map@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/source-map@npm:24.9.0"
+  dependencies:
+    callsites: "npm:^3.0.0"
+    graceful-fs: "npm:^4.1.15"
+    source-map: "npm:^0.6.0"
+  checksum: bda54802c6fe672687b86b530a876b3bb27a3bff639aa04c2217413c8128d4091478f04ef9cab34a8697e649f89455951e7455077dfc9f5d30493fe24b84c612
+  languageName: node
+  linkType: hard
+
+"@jest/test-result@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/test-result@npm:24.9.0"
+  dependencies:
+    "@jest/console": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    "@types/istanbul-lib-coverage": "npm:^2.0.0"
+  checksum: 9d0c92edab8f724cfb765a010941525bb0993a2559adcd8c6f2904e5a1121e92c3c8af901acff11a6250821f94cb9d17ae822a917b103d3db4f6566da9354575
+  languageName: node
+  linkType: hard
+
+"@jest/test-sequencer@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/test-sequencer@npm:24.9.0"
+  dependencies:
+    "@jest/test-result": "npm:^24.9.0"
+    jest-haste-map: "npm:^24.9.0"
+    jest-runner: "npm:^24.9.0"
+    jest-runtime: "npm:^24.9.0"
+  checksum: e603221723c025f14fa05dbad863d85af8e6298c5c061e96bc1a1e9376b5b704d66e3a6e15b5cfac1275a294fb08624e088ccbacaefb5c2ea9689dcae9b196a0
+  languageName: node
+  linkType: hard
+
+"@jest/transform@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/transform@npm:24.9.0"
+  dependencies:
+    "@babel/core": "npm:^7.1.0"
+    "@jest/types": "npm:^24.9.0"
+    babel-plugin-istanbul: "npm:^5.1.0"
+    chalk: "npm:^2.0.1"
+    convert-source-map: "npm:^1.4.0"
+    fast-json-stable-stringify: "npm:^2.0.0"
+    graceful-fs: "npm:^4.1.15"
+    jest-haste-map: "npm:^24.9.0"
+    jest-regex-util: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    micromatch: "npm:^3.1.10"
+    pirates: "npm:^4.0.1"
+    realpath-native: "npm:^1.1.0"
+    slash: "npm:^2.0.0"
+    source-map: "npm:^0.6.1"
+    write-file-atomic: "npm:2.4.1"
+  checksum: 83e98201e65761842b12ab6f2e700a3795fc0951ffb18921a8749804dc3ba1fa8efa568779df0139e76ef3f2f7602809401f0f4fc98ea4df998918ceed6b084d
+  languageName: node
+  linkType: hard
+
+"@jest/types@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "@jest/types@npm:24.9.0"
+  dependencies:
+    "@types/istanbul-lib-coverage": "npm:^2.0.0"
+    "@types/istanbul-reports": "npm:^1.1.1"
+    "@types/yargs": "npm:^13.0.0"
+  checksum: 0b5a84e6b14379839a7dd84402d07c91bf4f1b749c607db1e855cc8071cc144249d4994b32de49fc995f77fc704f872bbd0574d6764be3ce58ddefed4685110e
   languageName: node
   linkType: hard
 
@@ -284,10 +475,100 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/babel__core@npm:^7.1.0":
+  version: 7.1.3
+  resolution: "@types/babel__core@npm:7.1.3"
+  dependencies:
+    "@babel/parser": "npm:^7.1.0"
+    "@babel/types": "npm:^7.0.0"
+    "@types/babel__generator": "npm:*"
+    "@types/babel__template": "npm:*"
+    "@types/babel__traverse": "npm:*"
+  checksum: 6ad96e80f25e9018f8ecdf5766d01b847c79c76fad1ac12d3680ae8b932a7a2b0245fe0ac85bbcd427a789e392f668c04208e5f8bb56e77762d769f3a3c44333
+  languageName: node
+  linkType: hard
+
+"@types/babel__generator@npm:*":
+  version: 7.0.2
+  resolution: "@types/babel__generator@npm:7.0.2"
+  dependencies:
+    "@babel/types": "npm:^7.0.0"
+  checksum: a58f695c6301801ee07c7b8c64e213192d7eb69caf8c9e4cf432744c88efe29a942061fb1ce22596fdd0c0414bffacbd7dc8caeaf6c3fad6002336b7ee07176c
+  languageName: node
+  linkType: hard
+
+"@types/babel__template@npm:*":
+  version: 7.0.2
+  resolution: "@types/babel__template@npm:7.0.2"
+  dependencies:
+    "@babel/parser": "npm:^7.1.0"
+    "@babel/types": "npm:^7.0.0"
+  checksum: 1685bf2f6742ec1da3d9e9009e4f7ce48cc1bd1df867588c309664fdd0948c6dd0ed1be864dfd59931c7bfe79a65e1b7b7916c46dfa33c7e8d62f2aced5883ca
+  languageName: node
+  linkType: hard
+
+"@types/babel__traverse@npm:*, @types/babel__traverse@npm:^7.0.6":
+  version: 7.0.7
+  resolution: "@types/babel__traverse@npm:7.0.7"
+  dependencies:
+    "@babel/types": "npm:^7.3.0"
+  checksum: e297ef91380c99d15f03260925092326773556306da03b2a4306256c921b5918342c28e234a6e27a4fcef58e654e4c149f020bf3cb2cfa2532d1031aadfa0e98
+  languageName: node
+  linkType: hard
+
+"@types/istanbul-lib-coverage@npm:*, @types/istanbul-lib-coverage@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "@types/istanbul-lib-coverage@npm:2.0.1"
+  checksum: 99c08aea4b3e87b8dfed8bd50ea5c2b793909cb302623b666390276adf42d22bcfbaec7661390608a6d10627feec6df89d4f5983b4fb2fb76c4cf1146b5773cc
+  languageName: node
+  linkType: hard
+
+"@types/istanbul-lib-report@npm:*":
+  version: 1.1.1
+  resolution: "@types/istanbul-lib-report@npm:1.1.1"
+  dependencies:
+    "@types/istanbul-lib-coverage": "npm:*"
+  checksum: d18c57754f04299edc116fd8a8a244c3156e328497808c3735f575c60c42e279e67399c5f0f2bf1af91e26fa4adee68a6731c13cd2174fc22c73a0434a6003ad
+  languageName: node
+  linkType: hard
+
+"@types/istanbul-reports@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@types/istanbul-reports@npm:1.1.1"
+  dependencies:
+    "@types/istanbul-lib-coverage": "npm:*"
+    "@types/istanbul-lib-report": "npm:*"
+  checksum: b9f1e06962919dd732f195d24f5801baf0115e226d687efd4de9df735654769329cac3f191e08bbdb46aa85c096699abcff27ae59fee731fdd89a3b8827cda69
+  languageName: node
+  linkType: hard
+
 "@types/semver@npm:^6.0.2":
   version: 6.0.2
   resolution: "@types/semver@npm:6.0.2"
   checksum: 212d9a825f7f49a8db7a5616462741fe02d5b5b493d88336f5b32e81cb23e14e303ae62e969630904bbd69ebfba7432e9546cb63f03fc5cd736d21aa9f6991ba
+  languageName: node
+  linkType: hard
+
+"@types/stack-utils@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@types/stack-utils@npm:1.0.1"
+  checksum: 429954a8da08b97ffa84d58ae3409bd8a743f5a1a74a7bdf8f59d9f8da9f62240829cea750a2f1141110935ef6fb533e8217649747936aacec24d0d76241c956
+  languageName: node
+  linkType: hard
+
+"@types/yargs-parser@npm:*":
+  version: 13.1.0
+  resolution: "@types/yargs-parser@npm:13.1.0"
+  checksum: 8ca046eb3df9dd64f94a053879e97bfee6860fff161a833d9fd24bad3d18465565cbf85ff875c1dac8e0119010dbe1c7384a7bd24b916f55fc572217b5d9eeb5
+  languageName: node
+  linkType: hard
+
+"@types/yargs@npm:^13.0.0":
+  version: 13.0.2
+  resolution: "@types/yargs@npm:13.0.2"
+  dependencies:
+    "@types/yargs-parser": "npm:*"
+  checksum: 9bd7929698860ae9dbed6344d6d9cfee1bf74801e8e08c679c6b48e15c22076b8053ec12f659ee6fb20a1d8c3efc2cd9b0e7db8e2c5e837368cf37488add7dfa
   languageName: node
   linkType: hard
 
@@ -646,6 +927,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"abab@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "abab@npm:2.0.1"
+  checksum: 70bc1f88ca468fb5e92a42b500c5ffbae5bdb5fae6fad1737d46de7846b9b124537d208a3925441971257524272e136e9ceff3a5c65af87bbc42419ebaa81b45
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -653,7 +941,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^6.2.1":
+"acorn-globals@npm:^4.1.0":
+  version: 4.3.3
+  resolution: "acorn-globals@npm:4.3.3"
+  dependencies:
+    acorn: "npm:^6.0.1"
+    acorn-walk: "npm:^6.0.1"
+  checksum: 1e2e54598ada6a39a703d604758c6ee0a339d50e32c3e14a0efe5e02c28c37e0cf532ac34070e38a3382cf39b98718632e6eec4cd273ba189cf5963b19b61565
+  languageName: node
+  linkType: hard
+
+"acorn-walk@npm:^6.0.1":
+  version: 6.2.0
+  resolution: "acorn-walk@npm:6.2.0"
+  checksum: 04533736f320e852c590f3c5d20f19d203c142cfae94b158ca50184fec0cc21fab1eeb87153056d3af4f95fa21a145ad8513f52217b77fb6f1566a7679cb942f
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^5.5.3":
+  version: 5.7.3
+  resolution: "acorn@npm:5.7.3"
+  bin:
+    acorn: ./bin/acorn
+  checksum: ef3d8cd5cb9d1b1170ccc93cbbf861147fff490003fbb99d468d6958cbad352e722e9d8503432f90c9645b337403ab1d2599ea0b9820cb89939a5d427d382721
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^6.0.1, acorn@npm:^6.2.1":
   version: 6.3.0
   resolution: "acorn@npm:6.3.0"
   bin:
@@ -703,6 +1017,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ansi-escapes@npm:^3.0.0":
+  version: 3.2.0
+  resolution: "ansi-escapes@npm:3.2.0"
+  checksum: 930b2c338a36d4c69df9aac84c8dc48a41b6af1a73ee2e14ed5b07eb465e500e662a9db028c62aa2b49d0055dad3ee8d710599501c2a8598a58d82ee8111a9b7
+  languageName: node
+  linkType: hard
+
 "ansi-regex@npm:^2.0.0":
   version: 2.1.1
   resolution: "ansi-regex@npm:2.1.1"
@@ -710,7 +1031,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-styles@npm:^3.2.1":
+"ansi-regex@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "ansi-regex@npm:3.0.0"
+  checksum: 10466b12ce1d96dda17538dfc6d5d41d27176382768a12c5cacb1df559abf662e0b362c1b88d394658fb2cd851fe437c3b964455cfbd83843f78d344f86cd98b
+  languageName: node
+  linkType: hard
+
+"ansi-regex@npm:^4.0.0, ansi-regex@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "ansi-regex@npm:4.1.0"
+  checksum: 81d6694a109fc59673447e2e5c8f2866fc2d9bba73901a53542663f6b085ab05726a831ea0f1a6c66496c7c4fb3b3c9bebef12d73e08601aad3d80bd60c4d2f0
+  languageName: node
+  linkType: hard
+
+"ansi-styles@npm:^3.2.0, ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
   dependencies:
@@ -780,6 +1115,13 @@ __metadata:
   version: 3.1.0
   resolution: "arr-union@npm:3.1.0"
   checksum: ccc29d4a2a221251fb4b642ef9c7df4bed2b8a84a490e95760a372130146afb24206f304f8883c255696e82fc1891e47503ef2186a9c46832120a13f22fe283a
+  languageName: node
+  linkType: hard
+
+"array-equal@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "array-equal@npm:1.0.0"
+  checksum: 36c3499486070c96521ad4bc2d93756d121882434902f4111948e2a7495fbc5d6f54e0967f2986565e790d7e4b3ace6399615b4ea652bf81769a02e68b538182
   languageName: node
   linkType: hard
 
@@ -864,10 +1206,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"astral-regex@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "astral-regex@npm:1.0.0"
+  checksum: aee98d801bdf9831f65ef15b2b358cc698208afba486feea9806c1800a78c913f374a9022f98a199350798e637498e0bc4e5ecb7ef4708dda3077b2e82ae341d
+  languageName: node
+  linkType: hard
+
 "async-each@npm:^1.0.1":
   version: 1.0.3
   resolution: "async-each@npm:1.0.3"
   checksum: 493c3f7dbf4df5f998edab0e4031b6e279b19f7b6b3bbdfc0665a5a58a574df6df3fe871dc046fd64ba477d2d42d2b90d85054abe2b8f22c27c793b63297712c
+  languageName: node
+  linkType: hard
+
+"async-limiter@npm:~1.0.0":
+  version: 1.0.1
+  resolution: "async-limiter@npm:1.0.1"
+  checksum: a3e69d2ffbed1dd66ed784bc9bb0ce21c0661b32b37f904d2575b3b6cfea6b4223820c7bd8a70d49f70089255c0e7be68b1f4f7086a99ca7f649620f7366b887
   languageName: node
   linkType: hard
 
@@ -901,6 +1257,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-jest@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "babel-jest@npm:24.9.0"
+  dependencies:
+    "@jest/transform": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    "@types/babel__core": "npm:^7.1.0"
+    babel-plugin-istanbul: "npm:^5.1.0"
+    babel-preset-jest: "npm:^24.9.0"
+    chalk: "npm:^2.4.2"
+    slash: "npm:^2.0.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 88264525187522302b662985ce7561b3ff7346908353d71f682a4ca43fd8b9ce60ac1362a1bf5c8e47861b80bc7f7c7f718744e64d4dce481b6168e8462448cb
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:^8.0.6":
   version: 8.0.6
   resolution: "babel-loader@npm:8.0.6"
@@ -916,6 +1289,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-istanbul@npm:^5.1.0":
+  version: 5.2.0
+  resolution: "babel-plugin-istanbul@npm:5.2.0"
+  dependencies:
+    "@babel/helper-plugin-utils": "npm:^7.0.0"
+    find-up: "npm:^3.0.0"
+    istanbul-lib-instrument: "npm:^3.3.0"
+    test-exclude: "npm:^5.2.3"
+  checksum: a89df6ad8cf3e6a5d99426d0e15fadfcebce07a571059f4904687b4e509baf3c6e71a77607e6d5909ff79abaea2e01ea33515038ebb3de53b73f66debaef4fc0
+  languageName: node
+  linkType: hard
+
+"babel-plugin-jest-hoist@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "babel-plugin-jest-hoist@npm:24.9.0"
+  dependencies:
+    "@types/babel__traverse": "npm:^7.0.6"
+  checksum: 1eb63718651b6cd8e2224c3e1a0d054b72a3863b8c6ee74ea87a6904859661ab0e62ca9550aabd38f5da5375ba0d50a4317b842415498d413dccc31624153daa
+  languageName: node
+  linkType: hard
+
 babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 1.0.0
   resolution: babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import
@@ -928,6 +1322,18 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   peerDependencies:
     "@babel/core": ^7
   checksum: e4f81cff69c0704d176b8f80fbe756643d013bcb20e8664164d6d6d943b3f977a0d90d0cc76f1697ccf4e01c3b5a2debc3a1f5ba68fe48e7a680db67ecbfb3a6
+  languageName: node
+  linkType: hard
+
+"babel-preset-jest@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "babel-preset-jest@npm:24.9.0"
+  dependencies:
+    "@babel/plugin-syntax-object-rest-spread": "npm:^7.0.0"
+    babel-plugin-jest-hoist: "npm:^24.9.0"
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 4dfd0387bc0633fd8887135edd927d6f5a0462d08e8b1ed7e7b95d9041b95566cd90ec433a9ed5dab2706f08aa353cd20b41668dbc4d77f55090230d8868bf99
   languageName: node
   linkType: hard
 
@@ -1041,6 +1447,22 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"browser-process-hrtime@npm:^0.1.2":
+  version: 0.1.3
+  resolution: "browser-process-hrtime@npm:0.1.3"
+  checksum: 36390b03c10aaa5de62327a37e465dc255780367a12ce26e59e1754da949daf56fe441dac26f9166d5094b6c1d7a9bfe497d5434bd7559a5a8608924535a7343
+  languageName: node
+  linkType: hard
+
+"browser-resolve@npm:^1.11.3":
+  version: 1.11.3
+  resolution: "browser-resolve@npm:1.11.3"
+  dependencies:
+    resolve: "npm:1.1.7"
+  checksum: b9a8bc8daa4665c03eeeedfb4a7bdbbc47db22657dfb1f20f540f56da32c10057b570dc87ba5bdfbd94efd9472c7a2a2b271a541518322505ce7794e46584c41
+  languageName: node
+  linkType: hard
+
 "browserify-aes@npm:^1.0.0, browserify-aes@npm:^1.0.4":
   version: 1.2.0
   resolution: "browserify-aes@npm:1.2.0"
@@ -1109,6 +1531,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     pako: "npm:~1.0.5"
   checksum: 61026b4e7f36e0ab67c56c21fbfe3ca6f9f88839c25bf005732ed2f6f3d88e8cadef8554d030df06cd87cb98cf27c60a403cf45d243098d6b64253bbc354121e
+  languageName: node
+  linkType: hard
+
+"bser@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "bser@npm:2.1.0"
+  dependencies:
+    node-int64: "npm:^0.4.0"
+  checksum: a7258afccbf3bbe6783002d80b56642a97f910e2e7138ae8944aa00b2363c358d4c126f1065b9a6cdd6f3587c717b3f8d9aa3a538448c71d3aa3501fbf155f8b
   languageName: node
   linkType: hard
 
@@ -1206,10 +1637,26 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"camelcase@npm:^5.3.1":
+"callsites@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "callsites@npm:3.1.0"
+  checksum: 639a44443b6a8329920e4e66920bbddd6004abec46f5a91a3c65419434dc0cd10b2c5ef687ea9cca466747b956f810a3b5b4e1043e06b25f54cd1d84707933d4
+  languageName: node
+  linkType: hard
+
+"camelcase@npm:^5.0.0, camelcase@npm:^5.3.1":
   version: 5.3.1
   resolution: "camelcase@npm:5.3.1"
   checksum: 88fcc997cc1a67689bed7421589d91b0117d626573b6250d197ed667072e0e96bb132f5594a4f1f16662f737f92e67a16b6b7620fd92914ebe6afb04b2178f95
+  languageName: node
+  linkType: hard
+
+"capture-exit@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "capture-exit@npm:2.0.0"
+  dependencies:
+    rsvp: "npm:^4.8.4"
+  checksum: fec6e69e95cea8d5d766859fdadf1055c64c010fbd135ed32f1e5cefe78b13d6930fdd15e205269a51b47a48c52daf876ade844afa4726ce9763f89462a484fd
   languageName: node
   linkType: hard
 
@@ -1220,7 +1667,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"chalk@npm:^2.0.0, chalk@npm:^2.3.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
+"chalk@npm:^2.0.0, chalk@npm:^2.0.1, chalk@npm:^2.3.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -1270,6 +1717,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"ci-info@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ci-info@npm:2.0.0"
+  checksum: faf8f870daba1f4c324df9aef820d547bc215a797cc360381be247445c233f7e8b18067549b34068a34726b4b16648b81436c45906861070187121d1d44cecf6
+  languageName: node
+  linkType: hard
+
 "cipher-base@npm:^1.0.0, cipher-base@npm:^1.0.1, cipher-base@npm:^1.0.3":
   version: 1.0.4
   resolution: "cipher-base@npm:1.0.4"
@@ -1301,12 +1755,30 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"cliui@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "cliui@npm:5.0.0"
+  dependencies:
+    string-width: "npm:^3.1.0"
+    strip-ansi: "npm:^5.2.0"
+    wrap-ansi: "npm:^5.1.0"
+  checksum: 659dacbb75c84837b1f947a0f07d85bb1897ecad27cdc0248e11f3e3d435f96662d4898205d18952a576ed89191c7f1d687c1d43c8e173dac1b45dafd2e63794
+  languageName: node
+  linkType: hard
+
 "clone-response@npm:^1.0.2":
   version: 1.0.2
   resolution: "clone-response@npm:1.0.2"
   dependencies:
     mimic-response: "npm:^1.0.0"
   checksum: b3247b13439672f7e873653e67718a819c6e02a16c20b211c2b3823a41d5cb493784ba7e573e7464e8d7121f8731035ed5df97151c910a1bc1bf0cbd0c0950e1
+  languageName: node
+  linkType: hard
+
+"co@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "co@npm:4.6.0"
+  checksum: 4ae3814d631b22a90d98ecb90d5b874dc4a2862d29ec88bc68ecec9b0c3fc3df37f2b999a68013ba9df7e02ce421d8108c1c8eaad81f5b9d052ac6ca544b79ec
   languageName: node
   linkType: hard
 
@@ -1352,7 +1824,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"commander@npm:^2.20.0":
+"commander@npm:^2.20.0, commander@npm:~2.20.0":
   version: 2.20.0
   resolution: "commander@npm:2.20.0"
   checksum: 4904efd99bd5abd669c7679cbb9bcf1d9e28b1a9a6a89d7b11565f5e4d5175864ca79edc73c3509a32bcad23b3e484e41f1707007dec3e303dc1b2cf9f4997bf
@@ -1415,7 +1887,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"convert-source-map@npm:^1.1.0":
+"convert-source-map@npm:^1.1.0, convert-source-map@npm:^1.4.0":
   version: 1.6.0
   resolution: "convert-source-map@npm:1.6.0"
   dependencies:
@@ -1489,7 +1961,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^6.0.5":
+"cross-spawn@npm:^6.0.0, cross-spawn@npm:^6.0.5":
   version: 6.0.5
   resolution: "cross-spawn@npm:6.0.5"
   dependencies:
@@ -1521,6 +1993,22 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"cssom@npm:0.3.x, cssom@npm:>= 0.3.2 < 0.4.0":
+  version: 0.3.8
+  resolution: "cssom@npm:0.3.8"
+  checksum: 7ff0df86121bc287c12c9ff98f35778883c80f2a49878aeabf8734b12d480a093d33827d7278374f1aa80b3de68c387dfecb3fca5ee9ce2d2ce31bb59119d2aa
+  languageName: node
+  linkType: hard
+
+"cssstyle@npm:^1.0.0":
+  version: 1.4.0
+  resolution: "cssstyle@npm:1.4.0"
+  dependencies:
+    cssom: "npm:0.3.x"
+  checksum: 456009d8681d14a5036e44a32b289610f92e05bb0f35013fac4dd75457a7b26a3d8650aceee203698e5ef54c0ce602e81a2654cf3f64cb892f36e252b06eb297
+  languageName: node
+  linkType: hard
+
 "cyclist@npm:^1.0.1":
   version: 1.0.1
   resolution: "cyclist@npm:1.0.1"
@@ -1534,6 +2022,17 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     assert-plus: "npm:^1.0.0"
   checksum: 4077556bc3ecc984f2804280cc785b653e8c5c03b2dcf8861304c1f602f921da9f3b98becc3aa1044037a71b1addd812e1eaa12d74c07ed7a0c637314bb0d022
+  languageName: node
+  linkType: hard
+
+"data-urls@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "data-urls@npm:1.1.0"
+  dependencies:
+    abab: "npm:^2.0.0"
+    whatwg-mimetype: "npm:^2.2.0"
+    whatwg-url: "npm:^7.0.0"
+  checksum: 55f5b99bbf96436d65affd18a2b53c4c12cb5b8129e336fca4f15f7ff1f7bf714addc0e6bf23f45bd12e0de67f0ba27208ae0f092b80721aa50b6401be6c17e2
   languageName: node
   linkType: hard
 
@@ -1562,12 +2061,19 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.1.0":
+"debug@npm:^4.1.0, debug@npm:^4.1.1":
   version: 4.1.1
   resolution: "debug@npm:4.1.1"
   dependencies:
     ms: "npm:^2.1.1"
   checksum: 626f9e725386a7a0de0495fd2324be2bbdb9710c62fc31c704f8b86d46f78e8a2b72924d236fb71d49723ffad633d822b81b6a01c572ffd71c9c6c7fe9aa6e4a
+  languageName: node
+  linkType: hard
+
+"decamelize@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "decamelize@npm:1.2.0"
+  checksum: 0ead15763ac3a6401ba74a26a237ddaa01336fc7acdfa7839520ac8587ba9bfc3940abd1a83b56ed9fee73b4a82c2017a5a9287d101e1cac9b4f8c7e95b0e48c
   languageName: node
   linkType: hard
 
@@ -1591,6 +2097,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 0.6.0
   resolution: "deep-extend@npm:0.6.0"
   checksum: ac8bf0f7e37e660a8c3b21a306666b46b2ad66a28e9a1cb432e82c61c19658b3c99174e921574dec0d976be635621940ae34515ab4787efec3e03e8eb3d938c3
+  languageName: node
+  linkType: hard
+
+"deep-is@npm:~0.1.3":
+  version: 0.1.3
+  resolution: "deep-is@npm:0.1.3"
+  checksum: 37ff4da9d2436aee96f68539133b30ec09576637d825c36cb29c45ca9e00b60464836195cbb1769e2f7d55ab6e064dd4cc8d35c049837384f010fa9261e9e6e4
   languageName: node
   linkType: hard
 
@@ -1678,6 +2191,20 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"detect-newline@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "detect-newline@npm:2.1.0"
+  checksum: be2e49f806d28af6bff2cd228b01dd9fa627fcbc70780fd6afc642d1a9b993cf667e9ac95e86ccaf72f46982d31ae18375347478eec1498c2dd4cea8d6d54d06
+  languageName: node
+  linkType: hard
+
+"diff-sequences@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "diff-sequences@npm:24.9.0"
+  checksum: a2e0411d1b76d6b1654ec9b46204c3b67736e4d160c0759252c2288347ad0066ff6de8c0b05502f7864fd4e699ef50135f4c5753d524d8181caa42df490b7578
+  languageName: node
+  linkType: hard
+
 "diffie-hellman@npm:^5.0.0":
   version: 5.0.3
   resolution: "diffie-hellman@npm:5.0.3"
@@ -1703,6 +2230,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 1.2.0
   resolution: "domain-browser@npm:1.2.0"
   checksum: 57d39a91a2ac0d53ec7a8ecc5532db6d92d571eab0e3fc63b7f1b21a57ba7286da4a800c1f0366fddc97cd0bee2a1c79703fa298f57fa56c5af1edde5f329dc6
+  languageName: node
+  linkType: hard
+
+"domexception@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "domexception@npm:1.0.1"
+  dependencies:
+    webidl-conversions: "npm:^4.0.2"
+  checksum: 58d11a8b3717e335c130ec36d606b5de233c4074bc7c772780037d32e0c7e3a2b3c7661b5c92d854d6f5558c3bb2516954d25bda51f74e74babc2b5a02cec9d4
   languageName: node
   linkType: hard
 
@@ -1747,6 +2283,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     minimalistic-assert: "npm:^1.0.0"
     minimalistic-crypto-utils: "npm:^1.0.0"
   checksum: 7c04a87f9aeeabfa897df490280a0464f4fb0cbe907ac089b2bb3587055d984c1473971b91f1b307f206aa29aae55420aaf495d29297b2aea975daba6999ffd0
+  languageName: node
+  linkType: hard
+
+"emoji-regex@npm:^7.0.1":
+  version: 7.0.3
+  resolution: "emoji-regex@npm:7.0.3"
+  checksum: 7364312bb0da046836471bd280fa801eb08eb5bde5d1d6b1df549f48fc27c918b38e4fa68c372e3450ddbf62261150ce9100bb1a7f75c3812300856d87c37bb6
   languageName: node
   linkType: hard
 
@@ -1795,10 +2338,67 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"error-ex@npm:^1.3.1":
+  version: 1.3.2
+  resolution: "error-ex@npm:1.3.2"
+  dependencies:
+    is-arrayish: "npm:^0.2.1"
+  checksum: 9ccfc34a5ac0ad52b5e2d67b16034265edcba3479f06d8f089f783d5b9ea85dda2ff7436bc9f6e4935f3bc93a7a9dfb135090f427abbc845dae73180b05b1512
+  languageName: node
+  linkType: hard
+
+"es-abstract@npm:^1.5.1":
+  version: 1.14.2
+  resolution: "es-abstract@npm:1.14.2"
+  dependencies:
+    es-to-primitive: "npm:^1.2.0"
+    function-bind: "npm:^1.1.1"
+    has: "npm:^1.0.3"
+    has-symbols: "npm:^1.0.0"
+    is-callable: "npm:^1.1.4"
+    is-regex: "npm:^1.0.4"
+    object-inspect: "npm:^1.6.0"
+    object-keys: "npm:^1.1.1"
+    string.prototype.trimleft: "npm:^2.0.0"
+    string.prototype.trimright: "npm:^2.0.0"
+  checksum: b723012b859c57a55e9dd9fcaaf013f3406edd1840c94a98c00f53689b4a99f8bad0887c4f100de1e12a12f9917632eb289eb74ae31c32a475cf25c41509e313
+  languageName: node
+  linkType: hard
+
+"es-to-primitive@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "es-to-primitive@npm:1.2.0"
+  dependencies:
+    is-callable: "npm:^1.1.4"
+    is-date-object: "npm:^1.0.1"
+    is-symbol: "npm:^1.0.2"
+  checksum: b44a1f3cdbd58002891776e10bd06f396057fd6bc6b9d4ae58a732f5ec1ab0c6520b1f0b1659c424a42f92d56306d6d715d0108956b3793a1e33cfe9d168982e
+  languageName: node
+  linkType: hard
+
 "escape-string-regexp@npm:^1.0.5":
   version: 1.0.5
   resolution: "escape-string-regexp@npm:1.0.5"
   checksum: b535e47686864713efe35ac7fe331a5c0440bbe2c5f2f63ee0e56670fee6a11cd05656460121c6d1a2729e6bf5f1eaa17c71db343402e28a5fe56f8f9c4bc6c8
+  languageName: node
+  linkType: hard
+
+"escodegen@npm:^1.9.1":
+  version: 1.12.0
+  resolution: "escodegen@npm:1.12.0"
+  dependencies:
+    esprima: "npm:^3.1.3"
+    estraverse: "npm:^4.2.0"
+    esutils: "npm:^2.0.2"
+    optionator: "npm:^0.8.1"
+    source-map: "npm:~0.6.1"
+  dependenciesMeta:
+    source-map:
+      optional: true
+  bin:
+    escodegen: ./bin/escodegen.js
+    esgenerate: ./bin/esgenerate.js
+  checksum: 550f5543505936ccefe235de6ededf4c867be1bd363a317e398c4b0f3dd0979df106937498dc366043b3ae9b3adeb9a0ad71ac79821b8c67b86e3c1880d2ece4
   languageName: node
   linkType: hard
 
@@ -1809,6 +2409,16 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     esrecurse: "npm:^4.1.0"
     estraverse: "npm:^4.1.1"
   checksum: 7297b2d7f23f840d024039e03f235cce0152bc0872f37cfcab38148de962fe9dce0ccd5fc5a4c3c11fd924a4a12a266de7eedd731cb875db2c43b3a58d187f41
+  languageName: node
+  linkType: hard
+
+"esprima@npm:^3.1.3":
+  version: 3.1.3
+  resolution: "esprima@npm:3.1.3"
+  bin:
+    esparse: ./bin/esparse.js
+    esvalidate: ./bin/esvalidate.js
+  checksum: 6523b7ef12460051731bc7b5b400097aaf40ae6ce8a53e7677ab3e04383e70913896fdff48d56e10df35d15cd709f2dd3e30cae8a8126f63c263c4f9c11cce91
   languageName: node
   linkType: hard
 
@@ -1831,7 +2441,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"estraverse@npm:^4.1.0, estraverse@npm:^4.1.1":
+"estraverse@npm:^4.1.0, estraverse@npm:^4.1.1, estraverse@npm:^4.2.0":
   version: 4.3.0
   resolution: "estraverse@npm:4.3.0"
   checksum: 50c8b6aeb378340d8318d34510ed6604bb94cce98f3bc8579034db739d6b2774f8e361556a1eb3fa9440d7cec55aa346aafca5a40b56b038643dde53338d521a
@@ -1863,6 +2473,35 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"exec-sh@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "exec-sh@npm:0.3.2"
+  checksum: 747cc1ab6b438e05f55ea624c5540461e09631236092774e73e8354eb00dbb47b5449656d35e65ee38f1cc5dcd6062237f1860a4ca5b2f18502bf250111c7d7e
+  languageName: node
+  linkType: hard
+
+"execa@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "execa@npm:1.0.0"
+  dependencies:
+    cross-spawn: "npm:^6.0.0"
+    get-stream: "npm:^4.0.0"
+    is-stream: "npm:^1.1.0"
+    npm-run-path: "npm:^2.0.0"
+    p-finally: "npm:^1.0.0"
+    signal-exit: "npm:^3.0.0"
+    strip-eof: "npm:^1.0.0"
+  checksum: e629a8c223251d41ee71e6b479fd514b0a9916fe7089e4d7874d929b964f13e22ac389075a8b14e38f7a0213c98298006bb25f247e137d7a277dbc4ef8508b83
+  languageName: node
+  linkType: hard
+
+"exit@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "exit@npm:0.1.2"
+  checksum: b10334ca8a073458883b4e49a0fb22a131a45912eb898bf22451a0a7817f3d7f9d0dde974a7519696032afcc1554a604d7042a765bfdd2e71c26b7f4da7b929e
+  languageName: node
+  linkType: hard
+
 "expand-brackets@npm:^2.1.4":
   version: 2.1.4
   resolution: "expand-brackets@npm:2.1.4"
@@ -1875,6 +2514,20 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     snapdragon: "npm:^0.8.1"
     to-regex: "npm:^3.0.1"
   checksum: e75344a3aee8e415afc3d20f112ffbad9db151f45db73227888ef05b551d75288533394a18f659c54aee716b9c92194cf8fd6474c1a9bbb56479482f7f1eb974
+  languageName: node
+  linkType: hard
+
+"expect@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "expect@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    ansi-styles: "npm:^3.2.0"
+    jest-get-type: "npm:^24.9.0"
+    jest-matcher-utils: "npm:^24.9.0"
+    jest-message-util: "npm:^24.9.0"
+    jest-regex-util: "npm:^24.9.0"
+  checksum: dd8304baf932f7f4225f4e2ed6fc469aeb6a7866fe74afbcec95a7e7cc6045d8179cf08f7475863f778b5cd4a6a45b68a1e30156608d54667344f741d604109f
   languageName: node
   linkType: hard
 
@@ -1952,6 +2605,22 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 2.0.0
   resolution: "fast-json-stable-stringify@npm:2.0.0"
   checksum: c51b8fa1e5860145378caf07b268e368d22219d99c345abaf5710def89c9f758fe6a22c1ef479f76fad636a3736898425f64dc928e4e7403b47205a6983b3e00
+  languageName: node
+  linkType: hard
+
+"fast-levenshtein@npm:~2.0.4":
+  version: 2.0.6
+  resolution: "fast-levenshtein@npm:2.0.6"
+  checksum: 23617ba750203e8ea73b27ed99d57913b304e52ec8478c4172c380c0542539708f24fcc7dff29bc98110723bea37a36b1d0c14a97663ca556014c1f075815306
+  languageName: node
+  linkType: hard
+
+"fb-watchman@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "fb-watchman@npm:2.0.0"
+  dependencies:
+    bser: "npm:^2.0.0"
+  checksum: 069008b7c7c7ad9db67bc95ed428513fc69e1b639793517bbc58f5959bfc6f51d4ee039c9a0e26a9af79b74daf6c470fed59a7ec6d92be0923f8861ce247b823
   languageName: node
   linkType: hard
 
@@ -2109,7 +2778,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"function-bind@npm:^1.1.1":
+"function-bind@npm:^1.0.2, function-bind@npm:^1.1.1":
   version: 1.1.1
   resolution: "function-bind@npm:1.1.1"
   checksum: 9c75270028a55de8725feceb627bead09e14d568ec29618b79a2120557bbda8044477aaad095068523bde1d8c0cf095ee211bc6adc6bed660fe25916cfad6b7f
@@ -2132,7 +2801,14 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"get-stream@npm:^4.1.0":
+"get-caller-file@npm:^2.0.1":
+  version: 2.0.5
+  resolution: "get-caller-file@npm:2.0.5"
+  checksum: 5f8035502b92604d3671e0bc9d9eab4e04f202805b86826e8745a4c057a94003ba02ff2f206f9c794686a7d774d0050f32102f261a005dbed580d12dc76031bb
+  languageName: node
+  linkType: hard
+
+"get-stream@npm:^4.0.0, get-stream@npm:^4.1.0":
   version: 4.1.0
   resolution: "get-stream@npm:4.1.0"
   dependencies:
@@ -2183,7 +2859,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.3, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4":
+"glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4":
   version: 7.1.4
   resolution: "glob@npm:7.1.4"
   dependencies:
@@ -2242,6 +2918,30 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 4.2.2
   resolution: "graceful-fs@npm:4.2.2"
   checksum: 09b6bf364fedd74c72afc9246d29f64dac166068417655ffd8eec581bfbc4b5fa8eac17b5edf150307401aba8268d0079732c48a396e53732606a30699ba910e
+  languageName: node
+  linkType: hard
+
+"growly@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "growly@npm:1.3.0"
+  checksum: 281b02190578fdf6d4ad389c5e693fcea1e40f55c461911b5f633ae3b83c29ec1f105dd18342a7e57bb898048a9e834560a42791fec884bfab7f768dc81dd9fc
+  languageName: node
+  linkType: hard
+
+"handlebars@npm:^4.1.2":
+  version: 4.2.0
+  resolution: "handlebars@npm:4.2.0"
+  dependencies:
+    neo-async: "npm:^2.6.0"
+    optimist: "npm:^0.6.1"
+    source-map: "npm:^0.6.1"
+    uglify-js: "npm:^3.1.4"
+  dependenciesMeta:
+    uglify-js:
+      optional: true
+  bin:
+    handlebars: bin/handlebars
+  checksum: 15f0e9bc56c17d7ea0028cabe50caec1ce91266e2d4fabc44d89f0fdd25e59f17ac4972f3c6738a21db75719f5fbb5af895b232fcd8ae84a6d693834c8043eb8
   languageName: node
   linkType: hard
 
@@ -2322,7 +3022,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"has@npm:^1.0.3":
+"has@npm:^1.0.1, has@npm:^1.0.3":
   version: 1.0.3
   resolution: "has@npm:1.0.3"
   dependencies:
@@ -2362,6 +3062,22 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"hosted-git-info@npm:^2.1.4":
+  version: 2.8.4
+  resolution: "hosted-git-info@npm:2.8.4"
+  checksum: 37f18cf8fb8d970396bf8c40f7bf801cbed73262f41795abd207a17ea715f944e2e35ed9ac06becfc1c36f719d6e7f3d917b252120797874c4b1c1a1abc70a6e
+  languageName: node
+  linkType: hard
+
+"html-encoding-sniffer@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "html-encoding-sniffer@npm:1.0.2"
+  dependencies:
+    whatwg-encoding: "npm:^1.0.1"
+  checksum: a8722bc82eda2b748a6eaf7089245ea7e432e1a9e8dd0651d3e68389ed57e6afe0b98b637aca04fd15de86debb2320f96e56e72c58f6f57ac0a2a9b454422792
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.0.0":
   version: 4.0.3
   resolution: "http-cache-semantics@npm:4.0.3"
@@ -2396,7 +3112,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:^0.4.4":
+"iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.4":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
   dependencies:
@@ -2432,6 +3148,18 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 3.3.10
   resolution: "ignore@npm:3.3.10"
   checksum: de4cd7799b39e95a37740e5bb56b88ea2a3cf39b9ee3cdce193660e6c1468b7d27bbd4a1405659d95def4c9531476e972d867b2628c87272c63ca1cf8be5b0f9
+  languageName: node
+  linkType: hard
+
+"import-local@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "import-local@npm:2.0.0"
+  dependencies:
+    pkg-dir: "npm:^3.0.0"
+    resolve-cwd: "npm:^2.0.0"
+  bin:
+    import-local-fixture: fixtures/cli.js
+  checksum: 2e0962f2fc057b90253e5f661162ce98492572ca4505242b46616b90c5fd4fc807330113e3a12841e7ad45b1418d18f4b3625e2f1b4f3d7975cc48ada86ddd8d
   languageName: node
   linkType: hard
 
@@ -2487,6 +3215,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"invariant@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "invariant@npm:2.2.4"
+  dependencies:
+    loose-envify: "npm:^1.0.0"
+  checksum: 00c7f0b22f7bf50d1d08c1d91817eb77bff6fb9ad94c6667866ef6291cf939f091aaacaa44bd3273a17b2d2cef57dd7678a48688ca3b979855ea4f7d5b3f73f5
+  languageName: node
+  linkType: hard
+
 "is-accessor-descriptor@npm:^0.1.6":
   version: 0.1.6
   resolution: "is-accessor-descriptor@npm:0.1.6"
@@ -2502,6 +3239,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     kind-of: "npm:^6.0.0"
   checksum: e90ccd98724d63c3efd67298aae968db04ff5c9056277435da24414a95c1668b0c4d59f1ddce697bb55936034dfc40c5df60bbaffe11a0aca4d2f3030335660d
+  languageName: node
+  linkType: hard
+
+"is-arrayish@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "is-arrayish@npm:0.2.1"
+  checksum: 30a087abfda5e9c31cdd3f562d319a91687f930fa94d8fa317f1f14d71c32de25114559dee45a854a45f9817facb501c571b423d5b4c60dbd1f40afea4bfb1a0
   languageName: node
   linkType: hard
 
@@ -2521,10 +3265,21 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"is-callable@npm:^1.1.0":
+"is-callable@npm:^1.1.0, is-callable@npm:^1.1.4":
   version: 1.1.4
   resolution: "is-callable@npm:1.1.4"
   checksum: 041e4bed6fb99579b4af91bc182178d6b691c84fe065cd58b3dcf5f15442064b48cc445ef39008032e27afb802a0df0bfadddaa63d2c660cc14cfeb3253e9693
+  languageName: node
+  linkType: hard
+
+"is-ci@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "is-ci@npm:2.0.0"
+  dependencies:
+    ci-info: "npm:^2.0.0"
+  bin:
+    is-ci: bin.js
+  checksum: 6b3e776e1b2dddebcf2abf633785acef6e23643eb741c5f76af74d7736b807c9abd9d1b5b15cb3b9a5c6ccb7f3cb5ae6ae54f5fe037dc7840a7cd2f85bf1d74a
   languageName: node
   linkType: hard
 
@@ -2543,6 +3298,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     kind-of: "npm:^6.0.0"
   checksum: 1391bb2f23183d2169f41b5ba9df4d23dc11e895468a062be36b3b37e6cb4e8ffeed1252c6c87a0de3732ebe090e128dac79a514247a87b3e5afb624c5146965
+  languageName: node
+  linkType: hard
+
+"is-date-object@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "is-date-object@npm:1.0.1"
+  checksum: 38324b7e1306e1f8eb133fa0281e51a5cddd1d12cbff985f77889f906caf07b958b2a60f1480394b319027478bddca86d89f25058dc123d43a797dc9b5b5c3ad
   languageName: node
   linkType: hard
 
@@ -2600,6 +3362,20 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"is-fullwidth-code-point@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "is-fullwidth-code-point@npm:2.0.0"
+  checksum: 16fa232175569b81341138ff19b55c8cbe88a1c5c3951851d2e39dfa9fddb26b04f0cd98fcee38ec3ecbb2f50bc5b2873121183db6587b2184b79b13c0319a34
+  languageName: node
+  linkType: hard
+
+"is-generator-fn@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "is-generator-fn@npm:2.1.0"
+  checksum: c660964aef0eb1dad3be7ebeccf58e71d8ff34b2959a3ccb975920df1a259c0b134e8ee12eb936b9d08c92dca0aafd7f1242ebcf54b6f02595f9e5f497872067
+  languageName: node
+  linkType: hard
+
 "is-glob@npm:^3.1.0":
   version: 3.1.0
   resolution: "is-glob@npm:3.1.0"
@@ -2640,6 +3416,31 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     isobject: "npm:^3.0.1"
   checksum: b075eb7e54f835250b4065a13e5ad7db513633d90265032637f492122505871da6467e708ab2d22baaba0441007f87b27d33df871b1e333fd12b4dbdffa0446b
+  languageName: node
+  linkType: hard
+
+"is-regex@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "is-regex@npm:1.0.4"
+  dependencies:
+    has: "npm:^1.0.1"
+  checksum: 26e6350de16151f7e421b02877a041e0e01ee9be8498177fe48edd0e7f3e70cafd5faf1d327a0a14049dbf11f1af3962317b03221fbd92baaba6c48b7b3c5341
+  languageName: node
+  linkType: hard
+
+"is-stream@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "is-stream@npm:1.1.0"
+  checksum: c7c489de877bb190b05aa5b7726897d584ed7c78d68fe385de20ec83eab577edc3b9e8796938d3ab188ffef6c816b83dc2a3f2490ff1d345c160c1697b043ca1
+  languageName: node
+  linkType: hard
+
+"is-symbol@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "is-symbol@npm:1.0.2"
+  dependencies:
+    has-symbols: "npm:^1.0.0"
+  checksum: 9e06cb8ec7f67fa349e048cbd5a0016865cea84f2b415a06357c141cfad5e833a9e6317fd9e44492a381cea8a2764f473f87e66b982379ada077bde2b164d0a9
   languageName: node
   linkType: hard
 
@@ -2708,7 +3509,485 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"js-tokens@npm:^4.0.0":
+"istanbul-lib-coverage@npm:^2.0.2, istanbul-lib-coverage@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "istanbul-lib-coverage@npm:2.0.5"
+  checksum: fde68539996c9a17e1e7580ecf102f691173d101119e38f3cabc5e0cd6dc7bdc1488e5ab2afde945f7fd8d3a7ba968703366344b4fe38d4f179de3607376521f
+  languageName: node
+  linkType: hard
+
+"istanbul-lib-instrument@npm:^3.0.1, istanbul-lib-instrument@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "istanbul-lib-instrument@npm:3.3.0"
+  dependencies:
+    "@babel/generator": "npm:^7.4.0"
+    "@babel/parser": "npm:^7.4.3"
+    "@babel/template": "npm:^7.4.0"
+    "@babel/traverse": "npm:^7.4.3"
+    "@babel/types": "npm:^7.4.0"
+    istanbul-lib-coverage: "npm:^2.0.5"
+    semver: "npm:^6.0.0"
+  checksum: aa8ecc7d4e628917f7843d0c820567eac2066757902988df2bf72d50f151f22428449d674790979915c98113157aa3470c4ecd9fad5731ccdc090aa7cb5b1a97
+  languageName: node
+  linkType: hard
+
+"istanbul-lib-report@npm:^2.0.4":
+  version: 2.0.8
+  resolution: "istanbul-lib-report@npm:2.0.8"
+  dependencies:
+    istanbul-lib-coverage: "npm:^2.0.5"
+    make-dir: "npm:^2.1.0"
+    supports-color: "npm:^6.1.0"
+  checksum: d3293b275abce165df78023ddd19e1e596099142d9d7dd28f7df2bd690f5b533a68296e6d10e1e249ca6bc187eade463d756fabadeda48312940c78358eeba6c
+  languageName: node
+  linkType: hard
+
+"istanbul-lib-source-maps@npm:^3.0.1":
+  version: 3.0.6
+  resolution: "istanbul-lib-source-maps@npm:3.0.6"
+  dependencies:
+    debug: "npm:^4.1.1"
+    istanbul-lib-coverage: "npm:^2.0.5"
+    make-dir: "npm:^2.1.0"
+    rimraf: "npm:^2.6.3"
+    source-map: "npm:^0.6.1"
+  checksum: 4a387deff8230724a6327423c105f342c30e535376eaee88461d4a26adb13ead2293be2119cfc9e32e63bfdaee03f2011af2469add9780bf5590d4ddecaa92b0
+  languageName: node
+  linkType: hard
+
+"istanbul-reports@npm:^2.2.6":
+  version: 2.2.6
+  resolution: "istanbul-reports@npm:2.2.6"
+  dependencies:
+    handlebars: "npm:^4.1.2"
+  checksum: e4424fe9c92d0d9fc09d87357b51445ee434b9c379775972146086e84e41a8370447623d684a83c5a9c35ed770d1338083df066466e8ae65e7b9d167d10693a5
+  languageName: node
+  linkType: hard
+
+"jest-changed-files@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-changed-files@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    execa: "npm:^1.0.0"
+    throat: "npm:^4.0.0"
+  checksum: eb08946e1fef6fd6abf0649cf4eec3aaeb3c82f4d0e0febebc12f8278a206c4fdd67b2787edf8fc0d5a6dd9a6ebec2778e37c6aa41241957bdf80714c71bb9c4
+  languageName: node
+  linkType: hard
+
+"jest-cli@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-cli@npm:24.9.0"
+  dependencies:
+    "@jest/core": "npm:^24.9.0"
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    chalk: "npm:^2.0.1"
+    exit: "npm:^0.1.2"
+    import-local: "npm:^2.0.0"
+    is-ci: "npm:^2.0.0"
+    jest-config: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jest-validate: "npm:^24.9.0"
+    prompts: "npm:^2.0.1"
+    realpath-native: "npm:^1.1.0"
+    yargs: "npm:^13.3.0"
+  bin:
+    jest: ./bin/jest.js
+  checksum: 42926dab98b32ad65c7f7379a31d2f51d8937d2ee613aef4c11a278980bfa1c67db3f4091bb87a6659cd1d6a167e47eef8a8ce4ada00ddfefa9cf766fb572e43
+  languageName: node
+  linkType: hard
+
+"jest-config@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-config@npm:24.9.0"
+  dependencies:
+    "@babel/core": "npm:^7.1.0"
+    "@jest/test-sequencer": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    babel-jest: "npm:^24.9.0"
+    chalk: "npm:^2.0.1"
+    glob: "npm:^7.1.1"
+    jest-environment-jsdom: "npm:^24.9.0"
+    jest-environment-node: "npm:^24.9.0"
+    jest-get-type: "npm:^24.9.0"
+    jest-jasmine2: "npm:^24.9.0"
+    jest-regex-util: "npm:^24.3.0"
+    jest-resolve: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jest-validate: "npm:^24.9.0"
+    micromatch: "npm:^3.1.10"
+    pretty-format: "npm:^24.9.0"
+    realpath-native: "npm:^1.1.0"
+  checksum: bfd7b46273d585976738c41af30859492521845433e6178dfb446b8bf6d8acee8af3318b358fa46ff91e87af129362cda74168066dce61324d6c451f5cd53e1a
+  languageName: node
+  linkType: hard
+
+"jest-diff@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-diff@npm:24.9.0"
+  dependencies:
+    chalk: "npm:^2.0.1"
+    diff-sequences: "npm:^24.9.0"
+    jest-get-type: "npm:^24.9.0"
+    pretty-format: "npm:^24.9.0"
+  checksum: 524724a65bfbba3fd2112302312566000badc8a1c69034321f9b2e210fc9564015515808753518feeb3e7014f0a744244e5b2b4b2aa46cb03674467f6dd4392b
+  languageName: node
+  linkType: hard
+
+"jest-docblock@npm:^24.3.0":
+  version: 24.9.0
+  resolution: "jest-docblock@npm:24.9.0"
+  dependencies:
+    detect-newline: "npm:^2.1.0"
+  checksum: 62bbf60fc7c6d3101cab72cfa6934927ec1b23c66b0484936bb5759eb28072f5b6907618a36496932b96e7b806bbd6fcda5646d35cf2881a854e2eadd444663c
+  languageName: node
+  linkType: hard
+
+"jest-each@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-each@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    chalk: "npm:^2.0.1"
+    jest-get-type: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    pretty-format: "npm:^24.9.0"
+  checksum: 8ffd7dd06e7c7705e79d888c0c876f1624d3be8e2c337d67494e47e5f3bc4229a09f5ba7a1c63fbfb80d9224f135f5aaa5b0e3f98251c977e931f8580eea731b
+  languageName: node
+  linkType: hard
+
+"jest-environment-jsdom@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-environment-jsdom@npm:24.9.0"
+  dependencies:
+    "@jest/environment": "npm:^24.9.0"
+    "@jest/fake-timers": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    jest-mock: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jsdom: "npm:^11.5.1"
+  checksum: 3bcd37903b878696325cec0ba8755b46267af17d2f56c588fe4394ac3d73926714a7165ab65a0cc2dafdf404e9829f928297686493b9211084327690cf1b40ea
+  languageName: node
+  linkType: hard
+
+"jest-environment-node@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-environment-node@npm:24.9.0"
+  dependencies:
+    "@jest/environment": "npm:^24.9.0"
+    "@jest/fake-timers": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    jest-mock: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+  checksum: c98c9146965230535976e52f210a59d9b64f987ed94569096850697b070e8d0734fe94d63c161a81cbb6ae4450135933c6b45821bed99ff0f4877be03452d819
+  languageName: node
+  linkType: hard
+
+"jest-get-type@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-get-type@npm:24.9.0"
+  checksum: 7d556e18b62a9f4f848d7aa1cd7ce749899d3e907e4718ef585d701c7a0461d02e3094e1d1ea65a8135a41f6a572fb0ee1da34023467976423aa21bf2efdc105
+  languageName: node
+  linkType: hard
+
+"jest-haste-map@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-haste-map@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    anymatch: "npm:^2.0.0"
+    fb-watchman: "npm:^2.0.0"
+    fsevents: "npm:^1.2.7"
+    graceful-fs: "npm:^4.1.15"
+    invariant: "npm:^2.2.4"
+    jest-serializer: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jest-worker: "npm:^24.9.0"
+    micromatch: "npm:^3.1.10"
+    sane: "npm:^4.0.3"
+    walker: "npm:^1.0.7"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  checksum: e12d94bc2dfe80b135813b79bbc11d024b4157253143bc1ea74e1a973aa71ac4db65cb296bdd308fb24311418a82732fc1ea4c35a965965ac7c954df9a62e413
+  languageName: node
+  linkType: hard
+
+"jest-jasmine2@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-jasmine2@npm:24.9.0"
+  dependencies:
+    "@babel/traverse": "npm:^7.1.0"
+    "@jest/environment": "npm:^24.9.0"
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    chalk: "npm:^2.0.1"
+    co: "npm:^4.6.0"
+    expect: "npm:^24.9.0"
+    is-generator-fn: "npm:^2.0.0"
+    jest-each: "npm:^24.9.0"
+    jest-matcher-utils: "npm:^24.9.0"
+    jest-message-util: "npm:^24.9.0"
+    jest-runtime: "npm:^24.9.0"
+    jest-snapshot: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    pretty-format: "npm:^24.9.0"
+    throat: "npm:^4.0.0"
+  checksum: adf49f09841a18fc2957f71f1f2723ed036779a23747fa0328f48787700701f83aed01eb0508e66b660769ef33e172d2e92eb4d7e46bb9cfc6cba856198574e2
+  languageName: node
+  linkType: hard
+
+"jest-leak-detector@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-leak-detector@npm:24.9.0"
+  dependencies:
+    jest-get-type: "npm:^24.9.0"
+    pretty-format: "npm:^24.9.0"
+  checksum: 9a7dd7463461081b698f572007d9ad769e689d0699363bb40e4ee3d50e134e3e2f385c8f16dc71430806c226b65a0c35c16079c70b305fc932d68abc94c880c9
+  languageName: node
+  linkType: hard
+
+"jest-matcher-utils@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-matcher-utils@npm:24.9.0"
+  dependencies:
+    chalk: "npm:^2.0.1"
+    jest-diff: "npm:^24.9.0"
+    jest-get-type: "npm:^24.9.0"
+    pretty-format: "npm:^24.9.0"
+  checksum: e7d082efa9efdb30b81f0b52a419f1903ea7eccb8c74fb0ad651cabe5ace60bccde62fff0d100a79f9d96879818d38642d0d7724b70140406833e71195a81025
+  languageName: node
+  linkType: hard
+
+"jest-message-util@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-message-util@npm:24.9.0"
+  dependencies:
+    "@babel/code-frame": "npm:^7.0.0"
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    "@types/stack-utils": "npm:^1.0.1"
+    chalk: "npm:^2.0.1"
+    micromatch: "npm:^3.1.10"
+    slash: "npm:^2.0.0"
+    stack-utils: "npm:^1.0.1"
+  checksum: 71ca675b612e19d2e32c7a6a9044ec66e3f3ed4c3b78c3f0ce20826c9e305e20828381aa7b9aef061b6a2600af431717b0649ac68109838d39acca1a26ba11d0
+  languageName: node
+  linkType: hard
+
+"jest-mock@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-mock@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+  checksum: e99f4558d44eaee55dbaf69a01045decc41905ef1db3682d63339e75efda5cff73ee374b6553b398854153338f2a3f5828face81bc5aea387244bd6f74c8cefa
+  languageName: node
+  linkType: hard
+
+"jest-pnp-resolver@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "jest-pnp-resolver@npm:1.2.1"
+  peerDependencies:
+    jest-resolve: "*"
+  peerDependenciesMeta:
+    jest-resolve:
+      optional: true
+  checksum: 07326eaf91bb719c805248bcbeedefa7c759f80122558f7edb56854622a66538cf41dbfb6e761f8871b8bdf43d79edf4edf031464ee5a5bf6251e56447eb0f65
+  languageName: node
+  linkType: hard
+
+"jest-regex-util@npm:^24.3.0, jest-regex-util@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-regex-util@npm:24.9.0"
+  checksum: d8af18b9a552eb1bad3705228b39651e0c1743a49ba5d0c18bbbcc06371efa5dc52700de2629864ecd0d4185179834e74e8916e494c502d164fca704901d9e3d
+  languageName: node
+  linkType: hard
+
+"jest-resolve-dependencies@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-resolve-dependencies@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    jest-regex-util: "npm:^24.3.0"
+    jest-snapshot: "npm:^24.9.0"
+  checksum: efe25452912b156f5574998ea8dbb65a114bddf9ecf472f723a9b8b351da48a51fe5f90f16d4e573e245ac70f67ca7617775433aa0a94cf9f1ae2a68e081ee44
+  languageName: node
+  linkType: hard
+
+"jest-resolve@npm:24.9.0, jest-resolve@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-resolve@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    browser-resolve: "npm:^1.11.3"
+    chalk: "npm:^2.0.1"
+    jest-pnp-resolver: "npm:^1.2.1"
+    realpath-native: "npm:^1.1.0"
+  checksum: 38fd28a51f954a37e78b8dbf66c3d0ee31537c897f508f62ed1575c7de41c70a7042a584af91b9aa6a040c2e556edb39173360d471791ecdc6d262165fd6220b
+  languageName: node
+  linkType: hard
+
+"jest-runner@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-runner@npm:24.9.0"
+  dependencies:
+    "@jest/console": "npm:^24.7.1"
+    "@jest/environment": "npm:^24.9.0"
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    chalk: "npm:^2.4.2"
+    exit: "npm:^0.1.2"
+    graceful-fs: "npm:^4.1.15"
+    jest-config: "npm:^24.9.0"
+    jest-docblock: "npm:^24.3.0"
+    jest-haste-map: "npm:^24.9.0"
+    jest-jasmine2: "npm:^24.9.0"
+    jest-leak-detector: "npm:^24.9.0"
+    jest-message-util: "npm:^24.9.0"
+    jest-resolve: "npm:^24.9.0"
+    jest-runtime: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jest-worker: "npm:^24.6.0"
+    source-map-support: "npm:^0.5.6"
+    throat: "npm:^4.0.0"
+  checksum: 69d2b50a847a66e60eb1fff16f89f894918e1b98ac2481afb79d95ab80b67a0de6b4e7b9eb6efd92ce9d107ebba4b565e965d8ec610b2da084c29c2b5c38ad80
+  languageName: node
+  linkType: hard
+
+"jest-runtime@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-runtime@npm:24.9.0"
+  dependencies:
+    "@jest/console": "npm:^24.7.1"
+    "@jest/environment": "npm:^24.9.0"
+    "@jest/source-map": "npm:^24.3.0"
+    "@jest/transform": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    "@types/yargs": "npm:^13.0.0"
+    chalk: "npm:^2.0.1"
+    exit: "npm:^0.1.2"
+    glob: "npm:^7.1.3"
+    graceful-fs: "npm:^4.1.15"
+    jest-config: "npm:^24.9.0"
+    jest-haste-map: "npm:^24.9.0"
+    jest-message-util: "npm:^24.9.0"
+    jest-mock: "npm:^24.9.0"
+    jest-regex-util: "npm:^24.3.0"
+    jest-resolve: "npm:^24.9.0"
+    jest-snapshot: "npm:^24.9.0"
+    jest-util: "npm:^24.9.0"
+    jest-validate: "npm:^24.9.0"
+    realpath-native: "npm:^1.1.0"
+    slash: "npm:^2.0.0"
+    strip-bom: "npm:^3.0.0"
+    yargs: "npm:^13.3.0"
+  bin:
+    jest-runtime: ./bin/jest-runtime.js
+  checksum: 43567b4d95c32cb6a480efc402608424dc344ebcf043ea93df724f674c6d25abfe1e39cd21c03723b2ad8338b241fbd7119deac32c9cd956b1e4eac12ef503c1
+  languageName: node
+  linkType: hard
+
+"jest-serializer@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-serializer@npm:24.9.0"
+  checksum: 469b7f2c28a3c18fced2f7f463b59e6b340c914138080a2c6927017fbe3bd27a6a7ffc3c445120c924c17e75c2ba725debb71127ada8210f6fa4fadaba08ebd2
+  languageName: node
+  linkType: hard
+
+"jest-snapshot@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-snapshot@npm:24.9.0"
+  dependencies:
+    "@babel/types": "npm:^7.0.0"
+    "@jest/types": "npm:^24.9.0"
+    chalk: "npm:^2.0.1"
+    expect: "npm:^24.9.0"
+    jest-diff: "npm:^24.9.0"
+    jest-get-type: "npm:^24.9.0"
+    jest-matcher-utils: "npm:^24.9.0"
+    jest-message-util: "npm:^24.9.0"
+    jest-resolve: "npm:^24.9.0"
+    mkdirp: "npm:^0.5.1"
+    natural-compare: "npm:^1.4.0"
+    pretty-format: "npm:^24.9.0"
+    semver: "npm:^6.2.0"
+  checksum: e431081519d6e5784f249afcd27344ffa80b94c573ead5af1feae19f0c96206b1437c8bada5bc3940f23f0dd247fe63c394f9913211aac4b34f75df8eb6d8b1b
+  languageName: node
+  linkType: hard
+
+"jest-util@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-util@npm:24.9.0"
+  dependencies:
+    "@jest/console": "npm:^24.9.0"
+    "@jest/fake-timers": "npm:^24.9.0"
+    "@jest/source-map": "npm:^24.9.0"
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    callsites: "npm:^3.0.0"
+    chalk: "npm:^2.0.1"
+    graceful-fs: "npm:^4.1.15"
+    is-ci: "npm:^2.0.0"
+    mkdirp: "npm:^0.5.1"
+    slash: "npm:^2.0.0"
+    source-map: "npm:^0.6.0"
+  checksum: b3f43dc55b7022ce48051a525168bf92c591cd204e5b0a99be5e800f8226b10eddbb8d15cf46022ebebd42e3429e0ff3e4f97c12e9b2a4410247607485798a92
+  languageName: node
+  linkType: hard
+
+"jest-validate@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-validate@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    camelcase: "npm:^5.3.1"
+    chalk: "npm:^2.0.1"
+    jest-get-type: "npm:^24.9.0"
+    leven: "npm:^3.1.0"
+    pretty-format: "npm:^24.9.0"
+  checksum: 442659d04d600c6ff64758141f51667f849e5ffd3f7312ac022e73d6647b315e584a88242edfe6f9f3a42dac94aa924a02606fc785ab8d265dbcadc81cd34c47
+  languageName: node
+  linkType: hard
+
+"jest-watcher@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-watcher@npm:24.9.0"
+  dependencies:
+    "@jest/test-result": "npm:^24.9.0"
+    "@jest/types": "npm:^24.9.0"
+    "@types/yargs": "npm:^13.0.0"
+    ansi-escapes: "npm:^3.0.0"
+    chalk: "npm:^2.0.1"
+    jest-util: "npm:^24.9.0"
+    string-length: "npm:^2.0.0"
+  checksum: 6e80133513f53117858c789bf9b0da71295e21238a1fb51497e310dbe8d4d70ae7aa389172a59fc4d823272acc6f871430567ccd2cdb57f78cc1669bb8559e98
+  languageName: node
+  linkType: hard
+
+"jest-worker@npm:^24.6.0, jest-worker@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest-worker@npm:24.9.0"
+  dependencies:
+    merge-stream: "npm:^2.0.0"
+    supports-color: "npm:^6.1.0"
+  checksum: c34269a90e54f27e6948f71bd9271c6b7b397109ecdc17872d93006ce524dbf9fe7b4e70485628b3e3266017f760baea493f867e1605749ca98c3675eba9e4e1
+  languageName: node
+  linkType: hard
+
+"jest@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "jest@npm:24.9.0"
+  dependencies:
+    import-local: "npm:^2.0.0"
+    jest-cli: "npm:^24.9.0"
+  bin:
+    jest: ./bin/jest.js
+  checksum: 270e4caea9da2ad12aaec8c09768e21067769cebc46270036e29710e36ee4c0a18ed29837d181e77bcc17527569488ed1895c7fe714c85cbdd8c98c915936517
+  languageName: node
+  linkType: hard
+
+"js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
   checksum: 6ca47816dfd1337e90a814fd7ac6dddd9e7a2380ccad951cdeeef5905b4b1ec491c101b899538d2db4901f495b2031462d5dfb369f7c76597bb8ba2c3e285d41
@@ -2731,6 +4010,40 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 0.1.1
   resolution: "jsbn@npm:0.1.1"
   checksum: e9f997a73ec8e5a6b0429fb0993cc248cda89146e3180fb0fc49d877f8107289f3fbcf199a26720193fd5a57ae3a486fbf50007c45a751b64a6472b09c4cad94
+  languageName: node
+  linkType: hard
+
+"jsdom@npm:^11.5.1":
+  version: 11.12.0
+  resolution: "jsdom@npm:11.12.0"
+  dependencies:
+    abab: "npm:^2.0.0"
+    acorn: "npm:^5.5.3"
+    acorn-globals: "npm:^4.1.0"
+    array-equal: "npm:^1.0.0"
+    cssom: "npm:>= 0.3.2 < 0.4.0"
+    cssstyle: "npm:^1.0.0"
+    data-urls: "npm:^1.0.0"
+    domexception: "npm:^1.0.1"
+    escodegen: "npm:^1.9.1"
+    html-encoding-sniffer: "npm:^1.0.2"
+    left-pad: "npm:^1.3.0"
+    nwsapi: "npm:^2.0.7"
+    parse5: "npm:4.0.0"
+    pn: "npm:^1.1.0"
+    request: "npm:^2.87.0"
+    request-promise-native: "npm:^1.0.5"
+    sax: "npm:^1.2.4"
+    symbol-tree: "npm:^3.2.2"
+    tough-cookie: "npm:^2.3.4"
+    w3c-hr-time: "npm:^1.0.1"
+    webidl-conversions: "npm:^4.0.2"
+    whatwg-encoding: "npm:^1.0.3"
+    whatwg-mimetype: "npm:^2.1.0"
+    whatwg-url: "npm:^6.4.1"
+    ws: "npm:^5.2.0"
+    xml-name-validator: "npm:^3.0.0"
+  checksum: 045fb1cfbb7901c86db2891610ae354e03fd183017a992f8c11c1cbf06678dc0297c2cc7ab6af7014d81057083bce397b43aa08cd8c28d2f8100050844308d59
   languageName: node
   linkType: hard
 
@@ -2763,7 +4076,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"json-parse-better-errors@npm:^1.0.2":
+"json-parse-better-errors@npm:^1.0.1, json-parse-better-errors@npm:^1.0.2":
   version: 1.0.2
   resolution: "json-parse-better-errors@npm:1.0.2"
   checksum: 2476f879c9e4837b960263302872430d8c0d987de3d539cb69819c7b855a1ca5670fd502d40689acd8b6a14817b74d2ae3bb82a41f3747247c8b0d8e05255af2
@@ -2866,6 +4179,49 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"kleur@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "kleur@npm:3.0.3"
+  checksum: e1e7d67dafa3c0e876cb79c4a0a55896589fbe3838544e2eeb055610d40d07c28d53c158e36fc31e3698b8aa5a1432d71e48ce57d0bff651f7280ef02f3f7839
+  languageName: node
+  linkType: hard
+
+"left-pad@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "left-pad@npm:1.3.0"
+  checksum: d9c41aba393a36ce7ef544948e1a6e0ce1e35b5378a39f0470cf551c219b92c68f9585fb89bbc554b133e5bd0b65d93dddf7d7eb2f6edf197a6375953ed9d4c5
+  languageName: node
+  linkType: hard
+
+"leven@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "leven@npm:3.1.0"
+  checksum: 908e6c5a8f19c66a5eb1fddae9c2bfddc04296f252850f04cd5d4d209bf220808e33f2236a081005003ae8d603e4d472e09ad7090197f01ca70387ea208d75de
+  languageName: node
+  linkType: hard
+
+"levn@npm:~0.3.0":
+  version: 0.3.0
+  resolution: "levn@npm:0.3.0"
+  dependencies:
+    prelude-ls: "npm:~1.1.2"
+    type-check: "npm:~0.3.2"
+  checksum: ca3f2198ef452b21faaf3f2b19911c11fca384145d0b77186a8c28a2317295e0fb1ecdeb75f625f53ea525775b468e80627af59f74ee60fdd59d60a0fd8ec478
+  languageName: node
+  linkType: hard
+
+"load-json-file@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "load-json-file@npm:4.0.0"
+  dependencies:
+    graceful-fs: "npm:^4.1.2"
+    parse-json: "npm:^4.0.0"
+    pify: "npm:^3.0.0"
+    strip-bom: "npm:^3.0.0"
+  checksum: 91582e04082036526bf22ce99c9d0c2bb386375fd07eef84bd86269fcdf8374b471402707628a3a1fd5c623281e420cf1379d77873342e89da3cfce0ea5f7f08
+  languageName: node
+  linkType: hard
+
 "loader-runner@npm:^2.4.0":
   version: 2.4.0
   resolution: "loader-runner@npm:2.4.0"
@@ -2894,6 +4250,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"lodash.sortby@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "lodash.sortby@npm:4.7.0"
+  checksum: abae731c28d51307c2b44e12386bcb2ac5562f36eb5476ec077265dfd6c0f56d4f0a9957056ec0663c1a3a926dcf435ec116ab8dde21ccd1ec4f0999d01dc409
+  languageName: node
+  linkType: hard
+
 "lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.15":
   version: 4.17.15
   resolution: "lodash@npm:4.17.15"
@@ -2907,6 +4270,17 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     underscore: "npm:^1.7.0"
   checksum: acd41e2b5b442a3ed9b97acc4d4f00580a77f703bb5f68f2e2034f9e623d95da07713d0e134e5811f5af072f8d6d9e77082d0c948723443f06de2ee29ad460c2
+  languageName: node
+  linkType: hard
+
+"loose-envify@npm:^1.0.0":
+  version: 1.4.0
+  resolution: "loose-envify@npm:1.4.0"
+  dependencies:
+    js-tokens: "npm:^3.0.0 || ^4.0.0"
+  bin:
+    loose-envify: cli.js
+  checksum: 9a3b8b5f216d7e8940a29f1a612669ce9b6eaf383993769da1c9f5a5c9ad751d6f6292462925f4326d58af6b7032581b1d7b61f275b922fda5b2bc70ce247988
   languageName: node
   linkType: hard
 
@@ -2933,13 +4307,22 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"make-dir@npm:^2.0.0":
+"make-dir@npm:^2.0.0, make-dir@npm:^2.1.0":
   version: 2.1.0
   resolution: "make-dir@npm:2.1.0"
   dependencies:
     pify: "npm:^4.0.1"
     semver: "npm:^5.6.0"
   checksum: 0f013eedf730dd101f90d63222692f604a9b5eb6dcdc5f8fb0245f320a434eabb8e8c60b6111e964151296901876e7ddfa7bdc7f28c2f75200c53eea8adf839c
+  languageName: node
+  linkType: hard
+
+"makeerror@npm:1.0.x":
+  version: 1.0.11
+  resolution: "makeerror@npm:1.0.11"
+  dependencies:
+    tmpl: "npm:1.0.x"
+  checksum: 8e2cc36a3fe6981940aff440c052faf6abc6cca436f4521542bc949d252b5630c00ed37f8d17e38f7fe2b0aabf0ad0fd498fb91c52bef748ab9c4858ed4c556c
   languageName: node
   linkType: hard
 
@@ -2984,6 +4367,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     errno: "npm:^0.1.3"
     readable-stream: "npm:^2.0.1"
   checksum: 34eda8b4c202962e4294f9302d8e6a73ce0f992ccd28469c82d5a5eff267444e6773d0d9cb61fc50001fd216c338415824ef73b44a285768922586a4590293bb
+  languageName: node
+  linkType: hard
+
+"merge-stream@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "merge-stream@npm:2.0.0"
+  checksum: c9e0c32d9923690ba18c97a0a7cb6ce41d867d8d5b3edd5de7fceb3249351a788f939bd862418581b4dff002dddf9c4d204cd460a03bf93abd7b7ed4d5f5ee43
   languageName: node
   linkType: hard
 
@@ -3083,14 +4473,14 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"minimist@npm:0.0.8":
+"minimist@npm:0.0.8, minimist@npm:~0.0.1":
   version: 0.0.8
   resolution: "minimist@npm:0.0.8"
   checksum: f824cd001247c73b7ff5561b6e179189766d9b6c1c91335bd3c81e3e2f523aab4bbc3bc3c02ccb276ec2a25f3fda1f7264a477b2fae82d70b672da4a5a3000ae
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.0":
+"minimist@npm:^1.1.1, minimist@npm:^1.2.0":
   version: 1.2.0
   resolution: "minimist@npm:1.2.0"
   checksum: 5486abd5e7c3dca42a6edf68133968d964feac83f1498b3915a198dc47f0e12f73818425ffeeea3708f5a9d4cf176449481139ff39416a644d6c3fb134b1dc89
@@ -3211,6 +4601,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"natural-compare@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "natural-compare@npm:1.4.0"
+  checksum: b883f085b675de744545057e719030d0e03b04ab28c7eb8db4f5246fbacae742dc6e2fe015b93a1e06d3c2a4ef3af54aaa59b8b22b79cfdb85a31a0bd107bc1d
+  languageName: node
+  linkType: hard
+
 "needle@npm:^2.2.1":
   version: 2.4.0
   resolution: "needle@npm:2.4.0"
@@ -3224,7 +4621,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"neo-async@npm:^2.5.0, neo-async@npm:^2.6.1":
+"neo-async@npm:^2.5.0, neo-async@npm:^2.6.0, neo-async@npm:^2.6.1":
   version: 2.6.1
   resolution: "neo-async@npm:2.6.1"
   checksum: 85e3009b19d21564ab98f78b4d83f8162291f684fb96c01479ca0dd4c6c870c81fd910a6ed8f29d8b71e7a9c80e3a18e7e7dfe15693e3cb92c8a87be21ee3ef9
@@ -3259,6 +4656,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"node-int64@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "node-int64@npm:0.4.0"
+  checksum: d087590912fc59acecc3959bc92cb48aba36d8c49e84a86c921b4076853f34f0b7c99b532d58fd39d008b5b477088fc7e70e94b9931433dc573ff08da45e545c
+  languageName: node
+  linkType: hard
+
 "node-libs-browser@npm:^2.2.1":
   version: 2.2.1
   resolution: "node-libs-browser@npm:2.2.1"
@@ -3287,6 +4691,26 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     util: "npm:^0.11.0"
     vm-browserify: "npm:^1.0.1"
   checksum: 8a7350ab70bf253f186eb0be461323248afed1ee7a6f33fd2eeed63fd2e3ac9da65e3c0b4e6517736b613f6ff6ab5e027c51092753d362f4bb96f8de8c9a41ec
+  languageName: node
+  linkType: hard
+
+"node-modules-regexp@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "node-modules-regexp@npm:1.0.0"
+  checksum: dc3894bcf48a1e1b8326b702b1bae6fab409ddbeb5a7ea5b9dd36b1dae1980b18ec831e165550ab79159e96eec25d43abe5fde0e0577b29ba6fb1d1fd1847bb0
+  languageName: node
+  linkType: hard
+
+"node-notifier@npm:^5.4.2":
+  version: 5.4.3
+  resolution: "node-notifier@npm:5.4.3"
+  dependencies:
+    growly: "npm:^1.3.0"
+    is-wsl: "npm:^1.1.0"
+    semver: "npm:^5.5.0"
+    shellwords: "npm:^0.1.1"
+    which: "npm:^1.3.0"
+  checksum: 936aff8210248288bbc2088874e784eac261d654873b1f123889b33f3169be21ab5507ac8d689c1786a4470282cc62abf0913bac21b6e2ba09630bb17869f13f
   languageName: node
   linkType: hard
 
@@ -3343,6 +4767,18 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"normalize-package-data@npm:^2.3.2":
+  version: 2.5.0
+  resolution: "normalize-package-data@npm:2.5.0"
+  dependencies:
+    hosted-git-info: "npm:^2.1.4"
+    resolve: "npm:^1.10.0"
+    semver: "npm:2 || 3 || 4 || 5"
+    validate-npm-package-license: "npm:^3.0.1"
+  checksum: 03e9e507d7e4f743a30b3139bf2e6684eb3ec4556d23e1746175ebe1731bdc07853c9454ec92ce9a24bff391db67fb607b91f9794055b251cfcb4cb96635c62f
+  languageName: node
+  linkType: hard
+
 "normalize-path@npm:^2.1.1":
   version: 2.1.1
   resolution: "normalize-path@npm:2.1.1"
@@ -3383,6 +4819,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"npm-run-path@npm:^2.0.0":
+  version: 2.0.2
+  resolution: "npm-run-path@npm:2.0.2"
+  dependencies:
+    path-key: "npm:^2.0.0"
+  checksum: 0385d2cf3ec496041e151cbc5a14851eb29ac6d54aa0cc594f7438deca383135099a1ad934df09077dd59574bb69e43928644705f7c4cb3d1c749871225667cc
+  languageName: node
+  linkType: hard
+
 "npmlog@npm:0 || 1 || 2 || 3 || 4, npmlog@npm:^4.0.2":
   version: 4.1.2
   resolution: "npmlog@npm:4.1.2"
@@ -3399,6 +4844,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 1.0.1
   resolution: "number-is-nan@npm:1.0.1"
   checksum: e47b15a088d849fc44bd00112747340e075accc725f02f0ae358b7556b9a29018dcfe241fa5a956dfd626086fa5e320f8c80da1625ad0b064a40eaa1e20163e3
+  languageName: node
+  linkType: hard
+
+"nwsapi@npm:^2.0.7":
+  version: 2.1.4
+  resolution: "nwsapi@npm:2.1.4"
+  checksum: b4a922b7a30ea4afb7149592cfabf0ab87b8ef632a25e945350cb58b07e0723a1d0ee3c4f24f33add4e5bbe224ca07aaecec654bc748e8a50afed93e26aa678f
   languageName: node
   linkType: hard
 
@@ -3427,7 +4879,14 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"object-keys@npm:^1.0.11, object-keys@npm:^1.0.12":
+"object-inspect@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "object-inspect@npm:1.6.0"
+  checksum: 45dea3438e8656bf991a25de8f347a0f25252687463ac2636fd8db4613ed2ac20f6b4a6a44fae09355dd8ad6c5cf0974eb76111e63eafeeb7c1ad51b0625eed1
+  languageName: node
+  linkType: hard
+
+"object-keys@npm:^1.0.11, object-keys@npm:^1.0.12, object-keys@npm:^1.1.1":
   version: 1.1.1
   resolution: "object-keys@npm:1.1.1"
   checksum: aaec8b248f06df2c60a6a397fb3af922f4cfd917a99c72b3fa4451fd496777bd550bc54525225740c19b9cd0205d6032973ae19d16f71779ceea2db379a925ca
@@ -3455,6 +4914,16 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"object.getownpropertydescriptors@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "object.getownpropertydescriptors@npm:2.0.3"
+  dependencies:
+    define-properties: "npm:^1.1.2"
+    es-abstract: "npm:^1.5.1"
+  checksum: ec2be034be9a362800d7cade89a2b0ac3e80537e3af6aee62d4a980b75c8679032f8e9106495b15ed2fd0164e2696a19fdcf4cb7abc368df0b6ba937c6741285
+  languageName: node
+  linkType: hard
+
 "object.pick@npm:^1.3.0":
   version: 1.3.0
   resolution: "object.pick@npm:1.3.0"
@@ -3470,6 +4939,30 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     wrappy: "npm:1"
   checksum: 7f10cbd848aa0f5549fa22a0cad17b4115c6ea712cfba0528fff707db43fe031532b20c319b289b51c4c3c7d7714bc818891e2e44361ac1f55919756a789053b
+  languageName: node
+  linkType: hard
+
+"optimist@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "optimist@npm:0.6.1"
+  dependencies:
+    minimist: "npm:~0.0.1"
+    wordwrap: "npm:~0.0.2"
+  checksum: 1eb7c99e49e81156a40be4149944087d933360352a39fdabc017d3af92606f7aad15e911b3c5cbe460c63a821cff4f85fbd511eb2b6ddd01743080f0de172f05
+  languageName: node
+  linkType: hard
+
+"optionator@npm:^0.8.1":
+  version: 0.8.2
+  resolution: "optionator@npm:0.8.2"
+  dependencies:
+    deep-is: "npm:~0.1.3"
+    fast-levenshtein: "npm:~2.0.4"
+    levn: "npm:~0.3.0"
+    prelude-ls: "npm:~1.1.2"
+    type-check: "npm:~0.3.2"
+    wordwrap: "npm:~1.0.0"
+  checksum: 0a34094860bac047cf316a7c14e809eacac6c25360954915dff0eed45d407a151a0f58d970d3fff8a8836ded9829c40fb5e106115892fab072938df6931e0381
   languageName: node
   linkType: hard
 
@@ -3511,6 +5004,22 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"p-each-series@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "p-each-series@npm:1.0.0"
+  dependencies:
+    p-reduce: "npm:^1.0.0"
+  checksum: ffbaca30e18a845c6634165e3a60aea699e2516ef593352049e7ee67550c6e8a590b54a6cceb99098ee2d2c622ec4cbf02c9f09d90515db009d6f88bd658193a
+  languageName: node
+  linkType: hard
+
+"p-finally@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "p-finally@npm:1.0.0"
+  checksum: 2c7829b734475db7d12819ce0547a54c347b980c1c3620d1b9fafe1aa0834a950afca651d1862e9455ea19cfcd2d680ff83e57c2c4dc62471ef85f2c214f4005
+  languageName: node
+  linkType: hard
+
 "p-limit@npm:^2.0.0, p-limit@npm:^2.2.0":
   version: 2.2.1
   resolution: "p-limit@npm:2.2.1"
@@ -3526,6 +5035,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     p-limit: "npm:^2.0.0"
   checksum: fb343d116f26aa36fb89c70a311d08fa2d4a864c9aeaa592510d20959706592a7e2f3fe8cc1325794717b9c9488d03761d5ad84c72c808883e61ee04611a037c
+  languageName: node
+  linkType: hard
+
+"p-reduce@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "p-reduce@npm:1.0.0"
+  checksum: 2d78744757e926d0b945af4a504187093649d0d085a8edd51402b39c2fda6f6f93b56ed12f9502d13fcc27057875aa4b53775c73cb1caf3ecc17e9707ac29492
   languageName: node
   linkType: hard
 
@@ -3568,6 +5084,23 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"parse-json@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "parse-json@npm:4.0.0"
+  dependencies:
+    error-ex: "npm:^1.3.1"
+    json-parse-better-errors: "npm:^1.0.1"
+  checksum: 35f2fd18fa7f4e277daca2a60f2e32bf0659524e4e39071aa0f5caa66ca581b78d794a2e6e85e41513854dceb302e7f98b457114d4168c0aac5871ccd38547d5
+  languageName: node
+  linkType: hard
+
+"parse5@npm:4.0.0":
+  version: 4.0.0
+  resolution: "parse5@npm:4.0.0"
+  checksum: 45ee57a154b3ecb9d265609cb0d2796b9a9bf90f40c78dacaa9847344721abd65b5ed1d36014136ed3e7f6415239a30e0295497656622d3e90cfc00f1081405c
+  languageName: node
+  linkType: hard
+
 "pascalcase@npm:^0.1.1":
   version: 0.1.1
   resolution: "pascalcase@npm:0.1.1"
@@ -3603,7 +5136,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"path-key@npm:^2.0.1":
+"path-key@npm:^2.0.0, path-key@npm:^2.0.1":
   version: 2.0.1
   resolution: "path-key@npm:2.0.1"
   checksum: 43b2d46679ddca6263996972bb3281559b7bf09f42a4f528c27459ff0d364852e64f89dfd7c3a68a94710e06c9bb0158c75b71d1af1d4054248de3562665962c
@@ -3667,6 +5200,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"pirates@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "pirates@npm:4.0.1"
+  dependencies:
+    node-modules-regexp: "npm:^1.0.0"
+  checksum: 9071f435123c58a9f3f9d0a788578e1ed234655e4943febd68cddecd12b83e1251fb6252ac54eb43428860c0003397198d565de464ae40c1fdeab43adbe3eaad
+  languageName: node
+  linkType: hard
+
 "pkg-dir@npm:^3.0.0":
   version: 3.0.0
   resolution: "pkg-dir@npm:3.0.0"
@@ -3680,6 +5222,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 7.0.0
   resolution: "pluralize@npm:7.0.0"
   checksum: 12214738ed698b25a8781c584cc7398b1825719d225cb1fdcf98da3eadeb9be0ed0d3844d46fa3b63216a3a1b5ce5a64c2712237f07c02e1ab3b6c3c674dc749
+  languageName: node
+  linkType: hard
+
+"pn@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "pn@npm:1.1.0"
+  checksum: 267876e80d6a2275bd8ae56740cfa7b79452c6d788c7ad7c660194fae6776693529c676596f8b32d20a81e02f3a385521393352cc50774c0d25c967b56babc1d
   languageName: node
   linkType: hard
 
@@ -3699,6 +5248,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"prelude-ls@npm:~1.1.2":
+  version: 1.1.2
+  resolution: "prelude-ls@npm:1.1.2"
+  checksum: 6bd07f0826646c6a958273de595c951cdf84b794e8fb81d834ae2b10209902ee5b7b03ccb2ec960fb787650be28cb270777973bb4da804ed8fa24a162b99f9f8
+  languageName: node
+  linkType: hard
+
 "prepend-http@npm:^2.0.0":
   version: 2.0.0
   resolution: "prepend-http@npm:2.0.0"
@@ -3710,6 +5266,18 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 5.3.0
   resolution: "pretty-bytes@npm:5.3.0"
   checksum: 73ff65453eab875c4606014bea40efa57c250f9328b5b91ab1be798c6be9b54e16cdae3d7cb96a7ca2ad51cef648a73ca6da9b725f80996e68114ca297cd9f99
+  languageName: node
+  linkType: hard
+
+"pretty-format@npm:^24.9.0":
+  version: 24.9.0
+  resolution: "pretty-format@npm:24.9.0"
+  dependencies:
+    "@jest/types": "npm:^24.9.0"
+    ansi-regex: "npm:^4.0.0"
+    ansi-styles: "npm:^3.2.0"
+    react-is: "npm:^16.8.4"
+  checksum: 56a30ba4ec100daeff00023b2f79b83581a92cba7db427f1d31822f006fbab91b05cb3de84c2d3f54ebec0c4907a298794ec53675c103cc8d4d3e53b0e14fdb2
   languageName: node
   linkType: hard
 
@@ -3762,6 +5330,16 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"prompts@npm:^2.0.1":
+  version: 2.2.1
+  resolution: "prompts@npm:2.2.1"
+  dependencies:
+    kleur: "npm:^3.0.3"
+    sisteransi: "npm:^1.0.3"
+  checksum: f758d56b472868466f9e9642cb7894447b97a4253c561399175db947696f6e646699da62bc44b44026fd87fbef17a7cf1273150b335ba70b8ce1149e9baf5236
+  languageName: node
+  linkType: hard
+
 "property-expr@npm:^1.5.0":
   version: 1.5.1
   resolution: "property-expr@npm:1.5.1"
@@ -3780,6 +5358,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 1.3.1
   resolution: "psl@npm:1.3.1"
   checksum: bb64560439cc5b5dd16c2ceb74235000ff2cd73b47cd2f7c96b5cc8095eecc390c5d1402095db7536c85703a029d0b45e8b94d0a6454df985b55c5f81a2ce3f7
+  languageName: node
+  linkType: hard
+
+"psl@npm:^1.1.28":
+  version: 1.4.0
+  resolution: "psl@npm:1.4.0"
+  checksum: 1c49a19c18887cda6c3f9cb722d589b9c4fd934605a8c7caedf8791e9cc58ba7a654ada258238cf5eb7ad96ce8eb3a7c7e909b45c1d37ecd49b9fde5068f12e8
   languageName: node
   linkType: hard
 
@@ -3842,7 +5427,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"punycode@npm:^2.1.0":
+"punycode@npm:^2.1.0, punycode@npm:^2.1.1":
   version: 2.1.1
   resolution: "punycode@npm:2.1.1"
   checksum: 91fc7e73c7b46b91a0c94a4ab726d7f087b8c79e1978ef6ff141e32fa9df49476cc5703b5fdc7da509a0d0b9367b67c2f10e031f9b60c0e22c3cb98ad719d71f
@@ -3903,6 +5488,34 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"react-is@npm:^16.8.4":
+  version: 16.9.0
+  resolution: "react-is@npm:16.9.0"
+  checksum: 8446cd970ba6787e140c7dcc1cc1f2adf0154d72ed4139e0697bc2c3da18cadc9ae8162c2e6352b6dd41c2bf95e1d57da3a62b8c706dac775cd6f421de426150
+  languageName: node
+  linkType: hard
+
+"read-pkg-up@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "read-pkg-up@npm:4.0.0"
+  dependencies:
+    find-up: "npm:^3.0.0"
+    read-pkg: "npm:^3.0.0"
+  checksum: c5305690f1f0af83668cc68d18b85c465da1e035a0e72de8d4979271866be536c7379fce14272bd418d23fe1cc02c2f413055574b7f2197b7a152a83c41c2262
+  languageName: node
+  linkType: hard
+
+"read-pkg@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "read-pkg@npm:3.0.0"
+  dependencies:
+    load-json-file: "npm:^4.0.0"
+    normalize-package-data: "npm:^2.3.2"
+    path-type: "npm:^3.0.0"
+  checksum: 0305514f4bc5c8f83db3667fef025966d4eea51c93b9bed7d041a1a562f6672186cfc1274370182781c077741558dc28f56ebe57e1c2cc59642b993d5b64955e
+  languageName: node
+  linkType: hard
+
 "readable-stream@npm:1 || 2, readable-stream@npm:^2.0.0, readable-stream@npm:^2.0.1, readable-stream@npm:^2.0.2, readable-stream@npm:^2.0.6, readable-stream@npm:^2.1.5, readable-stream@npm:^2.2.2, readable-stream@npm:^2.3.3, readable-stream@npm:^2.3.6, readable-stream@npm:~2.3.6":
   version: 2.3.6
   resolution: "readable-stream@npm:2.3.6"
@@ -3926,6 +5539,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     micromatch: "npm:^3.1.10"
     readable-stream: "npm:^2.0.2"
   checksum: 753638a72dc701ac02b591b7dde6c2d332a205c7bc5fa17d4f24d1d1b223985233091f8f40fe7ed098c25bdd89d410ec77af9eaee346b4e9615e57b1fed4cd66
+  languageName: node
+  linkType: hard
+
+"realpath-native@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "realpath-native@npm:1.1.0"
+  dependencies:
+    util.promisify: "npm:^1.0.0"
+  checksum: 4b6050f61c647c6f613f8ca5c83e59454b421cb951ee43ac2bbcfc67ae9d469f3af65c151f311359685ecfd63dd5b03346a2bb066166e1d246d127ac89d12927
   languageName: node
   linkType: hard
 
@@ -3967,6 +5589,30 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"request-promise-core@npm:1.1.2":
+  version: 1.1.2
+  resolution: "request-promise-core@npm:1.1.2"
+  dependencies:
+    lodash: "npm:^4.17.11"
+  peerDependencies:
+    request: ^2.34
+  checksum: 8fa32d02255fe4b3b8ad65d6a07b93fbdc1171968bda02eda95a282b8c2ca37fffb8fa43bc8ddb0c1d0528049bfe7eee6cc59a60d98d83dfb0443ddb0abab955
+  languageName: node
+  linkType: hard
+
+"request-promise-native@npm:^1.0.5":
+  version: 1.0.7
+  resolution: "request-promise-native@npm:1.0.7"
+  dependencies:
+    request-promise-core: "npm:1.1.2"
+    stealthy-require: "npm:^1.1.1"
+    tough-cookie: "npm:^2.3.3"
+  peerDependencies:
+    request: ^2.34
+  checksum: 563ffb14aca98c62169f2e6c6a12427912e19d0ffa091f0cad3418a4bee80956071dff3f9d6e5ae54f4046836bfd8d26e352524ca8f3f3ec28fbd5898875145d
+  languageName: node
+  linkType: hard
+
 "request@npm:^2.87.0":
   version: 2.88.0
   resolution: "request@npm:2.88.0"
@@ -3995,6 +5641,36 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"require-directory@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "require-directory@npm:2.1.1"
+  checksum: b3a2dab9b9ced7fc1b221dc52a841109f464b4ff17b7edc4c6e5fe7380ca112a51ea03a2b40be60bcff7f2f30d8582560857b9d1a21c29f16e3bd19e46f4652d
+  languageName: node
+  linkType: hard
+
+"require-main-filename@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "require-main-filename@npm:2.0.0"
+  checksum: 2a6234f512c8449a32dd3f6347b7596da041399ebb66a0d45697f34a009634cc4e76a72f2bf43afb4208a2d6f7fe7f444cf598d3c79f19b68bc79ccdeb826301
+  languageName: node
+  linkType: hard
+
+"resolve-cwd@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "resolve-cwd@npm:2.0.0"
+  dependencies:
+    resolve-from: "npm:^3.0.0"
+  checksum: a9a478795829343d041f43d8429d7be5324f47c867b867ef7fde6a9c4b6ffb8c974e43b5ea6d6ce7e450b0088b565dd46a8eff6b56ab38f195dea0ee18a6bfdb
+  languageName: node
+  linkType: hard
+
+"resolve-from@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "resolve-from@npm:3.0.0"
+  checksum: e4c70668f2d68caf52dc6f6a29626697b004b8f07e82e42e753de6400ce6be65894b9870edb34ce059ebc551d6b57c27e74ce4cb19f7d1e931c451224ff7e3ea
+  languageName: node
+  linkType: hard
+
 "resolve-url@npm:^0.2.1":
   version: 0.2.1
   resolution: "resolve-url@npm:0.2.1"
@@ -4002,7 +5678,14 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.3.2":
+"resolve@npm:1.1.7":
+  version: 1.1.7
+  resolution: "resolve@npm:1.1.7"
+  checksum: 3dccc72c0ace4c21c958034fb5810e04b8255a0203970dc7100594b32fab81761346f6f0e8e8a6425b5af0eddbecdb3cbec44da9b4b42f0d9bdc8107f047d8b2
+  languageName: node
+  linkType: hard
+
+"resolve@npm:^1.10.0, resolve@npm:^1.3.2":
   version: 1.12.0
   resolution: "resolve@npm:1.12.0"
   dependencies:
@@ -4038,6 +5721,17 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"rimraf@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "rimraf@npm:3.0.0"
+  dependencies:
+    glob: "npm:^7.1.3"
+  bin:
+    rimraf: ./bin.js
+  checksum: 2f658f712a6b9e0a9dc68e470630cf63ccd310d3f58e92b048521d60b6a6914c0f975978841feb5b35548eb815e30841effd8e94a3c1622eea3c1f86298461bb
+  languageName: node
+  linkType: hard
+
 "ripemd160@npm:^2.0.0, ripemd160@npm:^2.0.1":
   version: 2.0.2
   resolution: "ripemd160@npm:2.0.2"
@@ -4045,6 +5739,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     hash-base: "npm:^3.0.0"
     inherits: "npm:^2.0.1"
   checksum: 8d8d6ed30acf99086916792874f410aec381f7cbaa3060722d0ff7fc129f98600b19e3a07b8caec575943fa9b290870d397f0fe38cbce6d9b3918b063a8e7a9a
+  languageName: node
+  linkType: hard
+
+"rsvp@npm:^4.8.4":
+  version: 4.8.5
+  resolution: "rsvp@npm:4.8.5"
+  checksum: 868da0c31656986995ed4079abc8da4fd9ea87cb95e3364789cd7a90ee6378e36d9b3bc6e5005c0c3d347f8c4f9f13c2867af32c2de2501455093053c02863f2
   languageName: node
   linkType: hard
 
@@ -4087,6 +5788,25 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"sane@npm:^4.0.3":
+  version: 4.1.0
+  resolution: "sane@npm:4.1.0"
+  dependencies:
+    "@cnakazawa/watch": "npm:^1.0.3"
+    anymatch: "npm:^2.0.0"
+    capture-exit: "npm:^2.0.0"
+    exec-sh: "npm:^0.3.2"
+    execa: "npm:^1.0.0"
+    fb-watchman: "npm:^2.0.0"
+    micromatch: "npm:^3.1.4"
+    minimist: "npm:^1.1.1"
+    walker: "npm:~1.0.5"
+  bin:
+    sane: ./src/cli.js
+  checksum: 2272ea5bf85d126e9c1c167b980d2bb1b61d42dbfb701ff47faefc1d0d94ad0b93501b33d3e2baa80d1e3e072186aefb999c19af7fe30b03a1bf43e57e1d7c7c
+  languageName: node
+  linkType: hard
+
 "sax@npm:^1.2.4":
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
@@ -4115,7 +5835,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"semver@npm:^5.0.1, semver@npm:^5.3.0, semver@npm:^5.4.1, semver@npm:^5.5.0, semver@npm:^5.6.0":
+"semver@npm:2 || 3 || 4 || 5, semver@npm:^5.0.1, semver@npm:^5.3.0, semver@npm:^5.4.1, semver@npm:^5.5.0, semver@npm:^5.6.0":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
   bin:
@@ -4124,7 +5844,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"semver@npm:^6.3.0":
+"semver@npm:^6.0.0, semver@npm:^6.2.0, semver@npm:^6.3.0":
   version: 6.3.0
   resolution: "semver@npm:6.3.0"
   bin:
@@ -4149,7 +5869,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"set-blocking@npm:~2.0.0":
+"set-blocking@npm:^2.0.0, set-blocking@npm:~2.0.0":
   version: 2.0.0
   resolution: "set-blocking@npm:2.0.0"
   checksum: 1d8d077bd4227bf634e9a440840ad55239dbe772255526b0232d8e0cf9fa438ce9faa352694be4675addfd8596caa466f15808706b26cdbe5ab05e0eef577fca
@@ -4203,10 +5923,24 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"signal-exit@npm:^3.0.0":
+"shellwords@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "shellwords@npm:0.1.1"
+  checksum: a007222ce6717f071238dace73fe474cb24cd63be9f3b901746dcac21ebe8e0d3b2e1a68c1e65a3f2a0c2f8aa5b1fb5ff71ace5db47079d862adb3e071bdef87
+  languageName: node
+  linkType: hard
+
+"signal-exit@npm:^3.0.0, signal-exit@npm:^3.0.2":
   version: 3.0.2
   resolution: "signal-exit@npm:3.0.2"
   checksum: ce17937b1712ddb2e009347833bfe990d77d09d4b2fda9f017f655ff374c58c8a58ebcf6fdff211bbb7f14fae71c75d34a75f29583c3328d866c40798c225da1
+  languageName: node
+  linkType: hard
+
+"sisteransi@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "sisteransi@npm:1.0.3"
+  checksum: 68ccccfc693366fd35785721c56f33e37efaa5c38eef8dac7464d6a34ce159b17f053c4118d51bccc5c72837c16c48b3a04762d474525e8da6f4f5f5aaa58e94
   languageName: node
   linkType: hard
 
@@ -4214,6 +5948,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 1.0.0
   resolution: "slash@npm:1.0.0"
   checksum: 206f41e251f87b1a5c62ab7fb7a3cf4c35564c2edc61513b26b19c5a252f40bb3579cbd180e7aa1d75cd9b6119b74a5a6ab31ee9c4b3cc471a812c6f48887283
+  languageName: node
+  linkType: hard
+
+"slash@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "slash@npm:2.0.0"
+  checksum: 9dc738662e81f44cc6eacdb7ac9d9dda31b9c933436c311f02a799a121524c94e7e8ad9d6c51da7fcfb16f1fbe701b83ed6124e2b73633b26ebfc4f4e30d73a9
   languageName: node
   linkType: hard
 
@@ -4273,7 +6014,7 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:~0.5.12":
+"source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12":
   version: 0.5.13
   resolution: "source-map-support@npm:0.5.13"
   dependencies:
@@ -4301,6 +6042,40 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 7db5bcef389215ccf45cf30df1e1ed24cffd1fcceb6032b20cde1fba30beb02a84b91f12497d5ec00f8fcefe1b51818d1aa7ffa282d767521e60081e68b70de9
+  languageName: node
+  linkType: hard
+
+"spdx-correct@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "spdx-correct@npm:3.1.0"
+  dependencies:
+    spdx-expression-parse: "npm:^3.0.0"
+    spdx-license-ids: "npm:^3.0.0"
+  checksum: c481929f0de5780c32c8c90d79844bab84aa494b3c931de277dfcacac6dbe7050fc49e63cd0a66e3849b5bc540c62f6d2a8497a6e2dbde691d3762b9579d77dd
+  languageName: node
+  linkType: hard
+
+"spdx-exceptions@npm:^2.1.0":
+  version: 2.2.0
+  resolution: "spdx-exceptions@npm:2.2.0"
+  checksum: 63e243c3edb0d3ec008ed7873d7aa868b4d977ad306342710ef5565ca692da3e0c047c847b38e5044a4490a3b0e888d567b571f113ada5d27a9c5d3052698884
+  languageName: node
+  linkType: hard
+
+"spdx-expression-parse@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "spdx-expression-parse@npm:3.0.0"
+  dependencies:
+    spdx-exceptions: "npm:^2.1.0"
+    spdx-license-ids: "npm:^3.0.0"
+  checksum: 583bdfb01871e406aaaea596ffbbdbfc6db3b7f613e9116f39cdcda9bc2ac6e397a0d52cb9c91465bfc3d5740f141bb073def733eb5357b5d031bfab658babd8
+  languageName: node
+  linkType: hard
+
+"spdx-license-ids@npm:^3.0.0":
+  version: 3.0.5
+  resolution: "spdx-license-ids@npm:3.0.5"
+  checksum: 4474a4cfb77e3d4eed75d556a8600dd63f4682861664c0464ba22107b63e3258d881bf3c7365b371be5711d10ad367181c1be9fb3dfd588e0e4ff97db313ef4b
   languageName: node
   linkType: hard
 
@@ -4350,6 +6125,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"stack-utils@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "stack-utils@npm:1.0.2"
+  checksum: 826dc27e3d774bcb3d905ceb2d0634790fe6fd9bc00808dbd538f64efdefd3497c4e76c7b7d560374fe34c1dac722c3ef87c9da8e1695bc5759772df2c875998
+  languageName: node
+  linkType: hard
+
 "static-extend@npm:^0.1.1":
   version: 0.1.2
   resolution: "static-extend@npm:0.1.2"
@@ -4357,6 +6139,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     define-property: "npm:^0.2.5"
     object-copy: "npm:^0.1.0"
   checksum: 3970a93a6bae6757b35707b34c4825e29e1d4940fcaf24c0f8ff4fb6d5f43dc08a8910527ca5ed151f0a168408e26d5b109c40b07431c362016e24b504971a35
+  languageName: node
+  linkType: hard
+
+"stealthy-require@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "stealthy-require@npm:1.1.1"
+  checksum: 07a71380c0a9563241e4305da626a735ac72f07d79d19071142dfef225e436e62ccc621ae248fc3dd487d077ab3c821dd4cbaf6c41c80850a329b1bb2c610e5d
   languageName: node
   linkType: hard
 
@@ -4427,6 +6216,16 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"string-length@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "string-length@npm:2.0.0"
+  dependencies:
+    astral-regex: "npm:^1.0.0"
+    strip-ansi: "npm:^4.0.0"
+  checksum: 2a42aa864303a4fb8838da182ce465435158d4eaed7f35cbf8e4ae8a2995f8f87b14c63e3fa015a6a4840b4b7f9db9348b9a56268d94a9cb7816449b0543d132
+  languageName: node
+  linkType: hard
+
 "string-width@npm:^1.0.1, string-width@npm:^1.0.2 || 2":
   version: 1.0.2
   resolution: "string-width@npm:1.0.2"
@@ -4435,6 +6234,37 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     is-fullwidth-code-point: "npm:^1.0.0"
     strip-ansi: "npm:^3.0.0"
   checksum: 26db741e3acc0a01e37c6750a76d0020369857b0b24e83f424c97038db40f41134dbf1b606ea9feae18e8d33995832addb35897dc774d16d1c9b618884ef6110
+  languageName: node
+  linkType: hard
+
+"string-width@npm:^3.0.0, string-width@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "string-width@npm:3.1.0"
+  dependencies:
+    emoji-regex: "npm:^7.0.1"
+    is-fullwidth-code-point: "npm:^2.0.0"
+    strip-ansi: "npm:^5.1.0"
+  checksum: f645b6fe8fff62daf64aa90339d2abb34fbd2dc2a134515c681cc043aa86ea65df93e7f9fa40ed498dbb45f65bae42935ba02be2123a13294d9562460f2a64a5
+  languageName: node
+  linkType: hard
+
+"string.prototype.trimleft@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "string.prototype.trimleft@npm:2.0.0"
+  dependencies:
+    define-properties: "npm:^1.1.2"
+    function-bind: "npm:^1.0.2"
+  checksum: 36f2689b63ea909c309bd1df5f828c07854feefaf9e1f32b4f583355658e9e8e4a6f2a540981e481df841e9d2e3437d119c91e18fe656efd84613cc405f201bd
+  languageName: node
+  linkType: hard
+
+"string.prototype.trimright@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "string.prototype.trimright@npm:2.0.0"
+  dependencies:
+    define-properties: "npm:^1.1.2"
+    function-bind: "npm:^1.0.2"
+  checksum: ee893a84db86436e42d0a8a4d621dfdaf9cd7ef57b75ad06d27b867ba6194e415ae5b893e1c82c9558432ff21389da9c29e09a6afb611dc9b715eb5b472f90e0
   languageName: node
   linkType: hard
 
@@ -4465,6 +6295,38 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"strip-ansi@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "strip-ansi@npm:4.0.0"
+  dependencies:
+    ansi-regex: "npm:^3.0.0"
+  checksum: 73b5dc11734899bf0d346ac157e91fb62f4d2941e045ce75ef02d5c7bffa424300651495269c4ed2cb2c150004a543b41e7e0ab74979136e327535b84e57f60a
+  languageName: node
+  linkType: hard
+
+"strip-ansi@npm:^5.0.0, strip-ansi@npm:^5.1.0, strip-ansi@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "strip-ansi@npm:5.2.0"
+  dependencies:
+    ansi-regex: "npm:^4.1.0"
+  checksum: b93319d43bf59c92af47808057b05b576147f4501127a1d9138ca16fe1793cd6dd2a31eb8ab317ae59357cb89ea33835e37ab38693debcf10f25a03672232689
+  languageName: node
+  linkType: hard
+
+"strip-bom@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "strip-bom@npm:3.0.0"
+  checksum: 5e7f1782614bc6d68f0b0d419d915bcd9f17dadcbde9fdbcd1129927901cf819cd5bf45099f2a5e066ece10967db6607e76b5ffd57c7fc729c0b14128d7a7ded
+  languageName: node
+  linkType: hard
+
+"strip-eof@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "strip-eof@npm:1.0.0"
+  checksum: fd3f003c69be82796565ac7f60c4eceec562a31bc2a780e0cd1eedff9942ed802fe4b20150dc7ecb8a06341b1a0e0f44c558050eaff296bcdcc2dab204a744a4
+  languageName: node
+  linkType: hard
+
 "strip-json-comments@npm:~2.0.1":
   version: 2.0.1
   resolution: "strip-json-comments@npm:2.0.1"
@@ -4478,6 +6340,22 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     has-flag: "npm:^3.0.0"
   checksum: 130fab9cd5e238205a4ae2c9e9fd82e23fc3f3196e26ce7655befda5681f3053f54b76af1709fe45512b58ac642aae7f84f487e79ca2a6a33fdc45589b7f1864
+  languageName: node
+  linkType: hard
+
+"supports-color@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "supports-color@npm:6.1.0"
+  dependencies:
+    has-flag: "npm:^3.0.0"
+  checksum: 00e889f4bf178209787539b8fa7b0fcecddb36823aa01900bd54c32523a7f0ad5a510d4aae13eee885feeff871b44b89130ba4984adae17df21f08830c67c353
+  languageName: node
+  linkType: hard
+
+"symbol-tree@npm:^3.2.2":
+  version: 3.2.4
+  resolution: "symbol-tree@npm:3.2.4"
+  checksum: eaf0370ecd55a12f0c3dca75bb06118609ca97c12fa18ae9929e88ea6eca0f3a346291fa9ff88345ca2d942ba4a095faf5899c1dfb7b06da047b0b77a0c130e6
   languageName: node
   linkType: hard
 
@@ -4542,6 +6420,25 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"test-exclude@npm:^5.2.3":
+  version: 5.2.3
+  resolution: "test-exclude@npm:5.2.3"
+  dependencies:
+    glob: "npm:^7.1.3"
+    minimatch: "npm:^3.0.4"
+    read-pkg-up: "npm:^4.0.0"
+    require-main-filename: "npm:^2.0.0"
+  checksum: f68ba227218d9dc3bc1092ef84efe910c03b1a082cd03e783480638734f7b53f229643d0cba7921561c2b68ac830325415b15cf78f31a664df34e4956d5e9c83
+  languageName: node
+  linkType: hard
+
+"throat@npm:^4.0.0":
+  version: 4.1.0
+  resolution: "throat@npm:4.1.0"
+  checksum: dec4ce31892d886389d86d29627bd2fae5b09412838619d9de038d988f0137b91f8d0865f362e4d8a3717a9d39263f231d6d864b2e9b112e40fdd45397b736ff
+  languageName: node
+  linkType: hard
+
 "through2@npm:^2.0.0":
   version: 2.0.5
   resolution: "through2@npm:2.0.5"
@@ -4567,6 +6464,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   dependencies:
     os-tmpdir: "npm:~1.0.2"
   checksum: 7d70a6ffe8623542b8013a147203de208a6da9580054f163044dd193cb9b76bed03775e1c1555c8c3320d83bfe35bd786bed834e7881061c0ba6cb8f4676d05a
+  languageName: node
+  linkType: hard
+
+"tmpl@npm:1.0.x":
+  version: 1.0.4
+  resolution: "tmpl@npm:1.0.4"
+  checksum: 24e20095bfbe3a8df33fd5da86afdb2f2bbb27ed3378a6a531fb3daa1d3619823bcea2227cd918018026945740a8ff78d67bbc0778fa4b14a89a96e9053a7a95
   languageName: node
   linkType: hard
 
@@ -4638,6 +6542,16 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"tough-cookie@npm:^2.3.3, tough-cookie@npm:^2.3.4":
+  version: 2.5.0
+  resolution: "tough-cookie@npm:2.5.0"
+  dependencies:
+    psl: "npm:^1.1.28"
+    punycode: "npm:^2.1.1"
+  checksum: 0ba9443464fc047fad41d4c5f4557040edb779cb89b08143a3e57242ea0c3e562e2e23097fff68cf5c7d10791707e9575aaee1b55a496fbf98dcf5efdd566e19
+  languageName: node
+  linkType: hard
+
 "tough-cookie@npm:~2.4.3":
   version: 2.4.3
   resolution: "tough-cookie@npm:2.4.3"
@@ -4645,6 +6559,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     psl: "npm:^1.1.24"
     punycode: "npm:^1.4.1"
   checksum: 6d6e4d6db18f8dac5afdb55fead8ca9724bbeb23a70d325e04b1b560b6ab39b8488ea3ddf515c957d2f43132678ddecd4f93124c5efea1c3276c4952d06fe37e
+  languageName: node
+  linkType: hard
+
+"tr46@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "tr46@npm:1.0.1"
+  dependencies:
+    punycode: "npm:^2.1.0"
+  checksum: ae0e6aba356a092b93607e0a4aa266a73cb053f3b8e1de4ec3517d174e96d7e2846b5632191957b5ebdd741204a44ca4a0ff3b487a6a845a531f8c8e523053ba
   languageName: node
   linkType: hard
 
@@ -4719,6 +6642,15 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"type-check@npm:~0.3.2":
+  version: 0.3.2
+  resolution: "type-check@npm:0.3.2"
+  dependencies:
+    prelude-ls: "npm:~1.1.2"
+  checksum: cc315e646124d60a8fc12f30fb0beba13292278a9ee101d24d8b60e69bfa8cf637b2446b238da2b544f0815e4122e59d788a1369a0ad2bda2a75cf4c938c79b5
+  languageName: node
+  linkType: hard
+
 "typedarray@npm:^0.0.6":
   version: 0.0.6
   resolution: "typedarray@npm:0.0.6"
@@ -4733,6 +6665,18 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     tsc: ./bin/tsc
     tsserver: ./bin/tsserver
   checksum: 30e66fc4f0ccc70fbbef4ba02a33760cffca8765c07ea54066e0c4af2aedebfb67345ef4f95ddec4b3ceaa1deec84f43b08a0a5c0dbd80c703862d68605c8dfc
+  languageName: node
+  linkType: hard
+
+"uglify-js@npm:^3.1.4":
+  version: 3.6.0
+  resolution: "uglify-js@npm:3.6.0"
+  dependencies:
+    commander: "npm:~2.20.0"
+    source-map: "npm:~0.6.1"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 6d984fd43a69ea417fb6560e5b154a59646727c9aeba3584648a38ff5f8077ed9052f5dc36b890a553c1e9a540a59b14e54d811c2413924643f43bc52e5d8439
   languageName: node
   linkType: hard
 
@@ -4839,6 +6783,16 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"util.promisify@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "util.promisify@npm:1.0.0"
+  dependencies:
+    define-properties: "npm:^1.1.2"
+    object.getownpropertydescriptors: "npm:^2.0.3"
+  checksum: 38dec6231a4c48d53207524eb1ee5bc4d603ebad16f46cfa8cba195c5d4e005006a0ebf97cd7853dc090776137b33c98d776d4652c4916ff1afbb49f9a1c9d0f
+  languageName: node
+  linkType: hard
+
 "util@npm:0.10.3":
   version: 0.10.3
   resolution: "util@npm:0.10.3"
@@ -4878,6 +6832,16 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"validate-npm-package-license@npm:^3.0.1":
+  version: 3.0.4
+  resolution: "validate-npm-package-license@npm:3.0.4"
+  dependencies:
+    spdx-correct: "npm:^3.0.0"
+    spdx-expression-parse: "npm:^3.0.0"
+  checksum: 554eb36887f899efcb2c326ec7ec1b4ea6bf14d3e8169d32d667f3c3bb8c5a11825878e82f55d5c53464a64141113b0cf640ace3652adf445129088517f31567
+  languageName: node
+  linkType: hard
+
 "verror@npm:1.10.0":
   version: 1.10.0
   resolution: "verror@npm:1.10.0"
@@ -4896,6 +6860,24 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"w3c-hr-time@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "w3c-hr-time@npm:1.0.1"
+  dependencies:
+    browser-process-hrtime: "npm:^0.1.2"
+  checksum: 54052466bca8850fb45a955a0c81dd62dc5dac22024b3b3c4085311eef9a17ee5b56c2e6ee74a75b5530ff7c0870ed6f11326e2b5f71eb099799ce4f15957975
+  languageName: node
+  linkType: hard
+
+"walker@npm:^1.0.7, walker@npm:~1.0.5":
+  version: 1.0.7
+  resolution: "walker@npm:1.0.7"
+  dependencies:
+    makeerror: "npm:1.0.x"
+  checksum: ba88b5c1539fcbb68b5c431472964700abb2a4d04f923627c883058809efc107b73e0d6fc68b427703a4ae3fb6025bc3aeb9dbe30d44e4744cd1d9561b51b8c8
+  languageName: node
+  linkType: hard
+
 "watchpack@npm:^1.6.0":
   version: 1.6.0
   resolution: "watchpack@npm:1.6.0"
@@ -4904,6 +6886,13 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     graceful-fs: "npm:^4.1.2"
     neo-async: "npm:^2.5.0"
   checksum: 982b66ade5984746b6a257177cbbbd11a0acffa2afb31008fc5f06bfd7cd94505f4c7c800d57edd26169a4188f0275c6a65456a2911ec3d14d483742c310e7f4
+  languageName: node
+  linkType: hard
+
+"webidl-conversions@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "webidl-conversions@npm:4.0.2"
+  checksum: 72efc68adc7225049abe2e4b16e796778c6b17cfa5453c3b8aa6d7906c8991d878f0a555a7f43468b7e21da9a4daeb08b87797d847bbdaa173c7519b97c776cc
   languageName: node
   linkType: hard
 
@@ -4959,7 +6948,52 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
-"which@npm:1, which@npm:^1.2.9":
+"whatwg-encoding@npm:^1.0.1, whatwg-encoding@npm:^1.0.3":
+  version: 1.0.5
+  resolution: "whatwg-encoding@npm:1.0.5"
+  dependencies:
+    iconv-lite: "npm:0.4.24"
+  checksum: 582f1a42bdbc0d42c42d3db2995e2b16d65da1ed67ac10628bc22e7065118c70c7f0bcc626b1bf3caf6416949af7c7dea42875f3473b7fbed2b96d971e40a0ce
+  languageName: node
+  linkType: hard
+
+"whatwg-mimetype@npm:^2.1.0, whatwg-mimetype@npm:^2.2.0":
+  version: 2.3.0
+  resolution: "whatwg-mimetype@npm:2.3.0"
+  checksum: 10de010908e1ed4c5cf9e0b35c43292bb74f90a9202302f42ae178b1d712533df46162aa1c3c1a4fc4ca57144c8b6f67b8625d61a45858c64c064288ea586c19
+  languageName: node
+  linkType: hard
+
+"whatwg-url@npm:^6.4.1":
+  version: 6.5.0
+  resolution: "whatwg-url@npm:6.5.0"
+  dependencies:
+    lodash.sortby: "npm:^4.7.0"
+    tr46: "npm:^1.0.1"
+    webidl-conversions: "npm:^4.0.2"
+  checksum: d0d89d967cd8c3adbce76792ee14951716b4f00890075f2e91be856fa03b4b30097622cf098d37b2a170a178ba60ffc9b9bb3026ec5aef0963a01fe066633f1c
+  languageName: node
+  linkType: hard
+
+"whatwg-url@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "whatwg-url@npm:7.0.0"
+  dependencies:
+    lodash.sortby: "npm:^4.7.0"
+    tr46: "npm:^1.0.1"
+    webidl-conversions: "npm:^4.0.2"
+  checksum: 74dda5086f2fefbe2134f8e49dc9367a347223fd74f674b4e3dd4005f3c3f8c05f70f596fc3d34b5ce7be6417a3ffa84e1c1dac954756122a479755e2ab22b7e
+  languageName: node
+  linkType: hard
+
+"which-module@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "which-module@npm:2.0.0"
+  checksum: 1eedfed8ff4f616438eda00d61312ee1b3f9c0c32149abf37e8177fa7a8c25e9e6ee050474318e9d2bcc1f89bae4df6b919e64bd692eb5b9b4e2c26bf077dcaf
+  languageName: node
+  linkType: hard
+
+"which@npm:1, which@npm:^1.2.9, which@npm:^1.3.0":
   version: 1.3.1
   resolution: "which@npm:1.3.1"
   dependencies:
@@ -4979,6 +7013,20 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"wordwrap@npm:~0.0.2":
+  version: 0.0.3
+  resolution: "wordwrap@npm:0.0.3"
+  checksum: 57bf4fd184702ad0c1f6425b47ab32bbc39f9d82d1964abaf5a5ddb862302c5119039a61bc766c49783b5f668b5567c62c87b954c5df90290696e307f6a20fae
+  languageName: node
+  linkType: hard
+
+"wordwrap@npm:~1.0.0":
+  version: 1.0.0
+  resolution: "wordwrap@npm:1.0.0"
+  checksum: 40a3391684a3f8051f0f4bedcda2bf0a94872b50a8def854f8a7a60245606bbdc5ff8ed520651fe810ec480850cc1d369ed5857c53504d469f82468a636e8e71
+  languageName: node
+  linkType: hard
+
 "worker-farm@npm:^1.7.0":
   version: 1.7.0
   resolution: "worker-farm@npm:1.7.0"
@@ -4988,10 +7036,48 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"wrap-ansi@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "wrap-ansi@npm:5.1.0"
+  dependencies:
+    ansi-styles: "npm:^3.2.0"
+    string-width: "npm:^3.0.0"
+    strip-ansi: "npm:^5.0.0"
+  checksum: 95899f76f4a7a263cd07e5dc62fe9941e6f20ccdd4f830d7db22054912f06cbad111ead9a8da760a2c94bf126651b8e1efdd10499cf7343e74f685da52edcf9a
+  languageName: node
+  linkType: hard
+
 "wrappy@npm:1":
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
   checksum: 78cf638e62da944f0ec1f0dffe1f99148e33e7908e92a2b717a0e97bcacd58033726b875bc6de4a05b206df6713c9f4d81b98a6f60ee4ac019d8b14a57772df0
+  languageName: node
+  linkType: hard
+
+"write-file-atomic@npm:2.4.1":
+  version: 2.4.1
+  resolution: "write-file-atomic@npm:2.4.1"
+  dependencies:
+    graceful-fs: "npm:^4.1.11"
+    imurmurhash: "npm:^0.1.4"
+    signal-exit: "npm:^3.0.2"
+  checksum: 66d0c2eb3ea39756a6dc8571ea2f6a44859fee6a93d389bb9fa382725bd406c39adf547de59b73bc87d32bf39463d295d0334ae6c5f786611a31d107fa942584
+  languageName: node
+  linkType: hard
+
+"ws@npm:^5.2.0":
+  version: 5.2.2
+  resolution: "ws@npm:5.2.2"
+  dependencies:
+    async-limiter: "npm:~1.0.0"
+  checksum: f4bec1d22e2bea7b0cc55559a7b9859582be474dda6207e809ebb8793c53cdb73669038fe75bd8fa851bcbea24bd7e298c39b0bf3a7a289a43c7695819510446
+  languageName: node
+  linkType: hard
+
+"xml-name-validator@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "xml-name-validator@npm:3.0.0"
+  checksum: f9083fa1d872451712df2c1e9d872d487cac87e71c448f67ede40df7c459fa7484978cbc881ce6a7695f11ede18f8037fb402d0b284fff48181849768c5658c6
   languageName: node
   linkType: hard
 
@@ -5016,6 +7102,34 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
   languageName: node
   linkType: hard
 
+"yargs-parser@npm:^13.1.1":
+  version: 13.1.1
+  resolution: "yargs-parser@npm:13.1.1"
+  dependencies:
+    camelcase: "npm:^5.0.0"
+    decamelize: "npm:^1.2.0"
+  checksum: 9bc39b530a77795e4e3021da70a6dd7030c76c9eb66b1d20256a9c028cae44d1af4fc62f853ae3f8a44713c3d064c60f9655c25a52beba6e638088f96310fabc
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "yargs@npm:13.3.0"
+  dependencies:
+    cliui: "npm:^5.0.0"
+    find-up: "npm:^3.0.0"
+    get-caller-file: "npm:^2.0.1"
+    require-directory: "npm:^2.1.1"
+    require-main-filename: "npm:^2.0.0"
+    set-blocking: "npm:^2.0.0"
+    string-width: "npm:^3.0.0"
+    which-module: "npm:^2.0.0"
+    y18n: "npm:^4.0.0"
+    yargs-parser: "npm:^13.1.1"
+  checksum: 1dd56620eb0295ba20f4e97fbe4eb754ab762fb11eb8baf513106f8021e0ff1cf0a2e8cf0fecb9e90de18f6ef0475d47092dffcc8efe3637e89bcb1539f7ecfa
+  languageName: node
+  linkType: hard
+
 "yarn-plugin-deduplicate@workspace:.":
   version: 0.0.0-use.local
   resolution: "yarn-plugin-deduplicate@workspace:."
@@ -5025,6 +7139,8 @@ babel-plugin-lazy-import@arcanis/babel-plugin-lazy-import:
     "@yarnpkg/cli": "npm:^2.0.0-rc.4"
     "@yarnpkg/core": "npm:^2.0.0-rc.5"
     clipanion: "npm:^2.1.1"
+    jest: "npm:^24.9.0"
+    rimraf: "npm:^3.0.0"
     semver: "npm:^6.3.0"
     typescript: "npm:^3.6.2"
   languageName: unknown
