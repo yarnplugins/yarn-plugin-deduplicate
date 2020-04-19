@@ -1,7 +1,8 @@
-module.exports = {};
-
-module.exports.factory = function (require) {
-  var plugin =
+/* eslint-disable*/
+module.exports = {
+  name: "@yarnpkg/plugin-deduplicate",
+  factory: function (require) {
+                          var plugin =
   /******/ (function(modules) { // webpackBootstrap
   /******/ 	// The module cache
   /******/ 	var installedModules = {};
@@ -90,34 +91,37 @@ module.exports.factory = function (require) {
   /************************************************************************/
   /******/ ([
   /* 0 */
-  /***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /***/ (function(module, exports, __webpack_require__) {
 
   "use strict";
-  __webpack_require__.r(__webpack_exports__);
-  /* harmony import */ var _commands_deduplicate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+
+  var __importDefault = this && this.__importDefault || function (mod) {
+    return mod && mod.__esModule ? mod : {
+      "default": mod
+    };
+  };
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  const deduplicate_1 = __importDefault(__webpack_require__(1));
 
   const plugin = {
-    commands: [_commands_deduplicate__WEBPACK_IMPORTED_MODULE_0__["default"]]
+    commands: [deduplicate_1.default]
   }; // eslint-disable-next-line arca/no-default-export
 
-  /* harmony default export */ __webpack_exports__["default"] = (plugin);
+  exports.default = plugin;
 
   /***/ }),
   /* 1 */
-  /***/ (function(module, __webpack_exports__, __webpack_require__) {
+  /***/ (function(module, exports, __webpack_require__) {
 
   "use strict";
-  __webpack_require__.r(__webpack_exports__);
-  /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return DeduplicateCommand; });
-  /* harmony import */ var _yarnpkg_cli__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-  /* harmony import */ var _yarnpkg_cli__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_yarnpkg_cli__WEBPACK_IMPORTED_MODULE_0__);
-  /* harmony import */ var _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
-  /* harmony import */ var _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__);
-  /* harmony import */ var clipanion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
-  /* harmony import */ var clipanion__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(clipanion__WEBPACK_IMPORTED_MODULE_2__);
-  /* harmony import */ var semver__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
-  /* harmony import */ var semver__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(semver__WEBPACK_IMPORTED_MODULE_3__);
-  var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+
+
+  var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
     var c = arguments.length,
         r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
         d;
@@ -125,19 +129,36 @@ module.exports.factory = function (require) {
     return c > 3 && r && Object.defineProperty(target, key, r), r;
   };
 
+  var __importStar = this && this.__importStar || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+  };
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  const cli_1 = __webpack_require__(2);
+
+  const core_1 = __webpack_require__(3);
+
+  const core_2 = __webpack_require__(3);
+
+  const clipanion_1 = __webpack_require__(4);
+
+  const semver = __importStar(__webpack_require__(5)); // eslint-disable-next-line arca/no-default-export
 
 
-
-
-   // eslint-disable-next-line arca/no-default-export
-
-  class DeduplicateCommand extends _yarnpkg_cli__WEBPACK_IMPORTED_MODULE_0__["BaseCommand"] {
+  class DeduplicateCommand extends cli_1.BaseCommand {
     async execute() {
-      const configuration = await _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["Configuration"].find(this.context.cwd, this.context.plugins);
+      const configuration = await core_1.Configuration.find(this.context.cwd, this.context.plugins);
       const {
         project
-      } = await _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["Project"].find(configuration, this.context.cwd);
-      const deduplicateReport = await _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["StreamReport"].start({
+      } = await core_1.Project.find(configuration, this.context.cwd);
+      const deduplicateReport = await core_1.StreamReport.start({
         configuration,
         stdout: this.context.stdout,
         includeFooter: false
@@ -147,8 +168,8 @@ module.exports.factory = function (require) {
         });
       });
       if (deduplicateReport.hasErrors()) return deduplicateReport.exitCode();
-      const cache = await _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["Cache"].find(configuration);
-      const installReport = await _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["StreamReport"].start({
+      const cache = await core_1.Cache.find(configuration);
+      const installReport = await core_1.StreamReport.start({
         configuration,
         stdout: this.context.stdout,
         includeLogs: true
@@ -162,14 +183,17 @@ module.exports.factory = function (require) {
     }
 
   }
-  DeduplicateCommand.usage = clipanion__WEBPACK_IMPORTED_MODULE_2__["Command"].Usage({
+
+  DeduplicateCommand.usage = clipanion_1.Command.Usage({
     category: `Workspace-related commands`,
     description: `Reduces dependencies with overlapping ranges to a smaller set of packages`,
     details: `https://github.com/atlassian/yarn-deduplicate for yarn v2`,
     examples: []
   });
 
-  __decorate([clipanion__WEBPACK_IMPORTED_MODULE_2__["Command"].Path(`deduplicate`)], DeduplicateCommand.prototype, "execute", null);
+  __decorate([clipanion_1.Command.Path(`deduplicate`)], DeduplicateCommand.prototype, "execute", null);
+
+  exports.default = DeduplicateCommand;
 
   function deduplicate(project, report) {
     const locatorsByIdent = new Map();
@@ -197,17 +221,17 @@ module.exports.factory = function (require) {
         const candidates = Array.from(locatorHashes).map(locatorHash => {
           const pkg = project.storedPackages.get(locatorHash);
 
-          if (_yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["structUtils"].isVirtualLocator(pkg)) {
-            const sourceLocator = _yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["structUtils"].devirtualizeLocator(pkg);
+          if (core_2.structUtils.isVirtualLocator(pkg)) {
+            const sourceLocator = core_2.structUtils.devirtualizeLocator(pkg);
             return project.storedPackages.get(sourceLocator.locatorHash);
           }
 
           return pkg;
         }).filter(sourcePackage => {
           if (sourcePackage.version === null) return false;
-          return semver__WEBPACK_IMPORTED_MODULE_3__["satisfies"](sourcePackage.version, semverMatch[1]);
+          return semver.satisfies(sourcePackage.version, semverMatch[1]);
         }).sort((a, b) => {
-          return semver__WEBPACK_IMPORTED_MODULE_3__["gt"](a.version, b.version) ? -1 : 1;
+          return semver.gt(a.version, b.version) ? -1 : 1;
         });
 
         if (candidates.length > 1) {
@@ -216,8 +240,8 @@ module.exports.factory = function (require) {
           const newPkg = project.storedPackages.get(newLocatorHash);
           const oldPkg = project.storedPackages.get(oldLocatorHash);
 
-          if (_yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["structUtils"].areLocatorsEqual(oldPkg, newPkg) === false) {
-            report.reportInfo(_yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["MessageName"].UNNAMED, `${_yarnpkg_core__WEBPACK_IMPORTED_MODULE_1__["structUtils"].stringifyDescriptor(descriptor)} can be deduplicated from ${oldPkg.name}@${oldPkg.version} to ${newPkg.name}@${newPkg.version}`);
+          if (core_2.structUtils.areLocatorsEqual(oldPkg, newPkg) === false) {
+            report.reportInfo(core_1.MessageName.UNNAMED, `${core_2.structUtils.stringifyDescriptor(descriptor)} can be deduplicated from ${oldPkg.name}@${oldPkg.version} to ${newPkg.name}@${newPkg.version}`);
             project.storedResolutions.set(descriptorHash, newLocatorHash);
           }
         }
@@ -251,7 +275,6 @@ module.exports.factory = function (require) {
 
   /***/ })
   /******/ ]);
-  return plugin;
+    return plugin;
+  },
 };
-
-module.exports.name = "@yarnpkg/plugin-deduplicate";

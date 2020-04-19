@@ -12,7 +12,6 @@ import { structUtils } from "@yarnpkg/core";
 import { Command } from "clipanion";
 import * as semver from "semver";
 
-// eslint-disable-next-line arca/no-default-export
 export default class DeduplicateCommand extends BaseCommand {
 	static usage = Command.Usage({
 		category: `Workspace-related commands`,
