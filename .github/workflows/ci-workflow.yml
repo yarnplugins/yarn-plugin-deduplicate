@@ -62,7 +62,7 @@ jobs:
       - name: "Use Node.js ${{matrix.node}}.x"
         uses: actions/setup-node@master
         with:
-          version: ${{matrix.node}}.x
+          node-version: ${{matrix.node}}.x
 
       - name: "Install dependencies"
         run: yarn
