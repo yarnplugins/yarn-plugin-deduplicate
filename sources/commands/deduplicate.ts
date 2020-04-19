@@ -3,6 +3,7 @@ import {
 	Cache,
 	Configuration,
 	LocatorHash,
+	Package,
 	Project,
 	IdentHash,
 	StreamReport,
@@ -51,6 +52,8 @@ export default class DeduplicateCommand extends BaseCommand {
 				includeLogs: true
 			},
 			async (report: StreamReport) => {
+				// TODO: what does this do and where should I invoke it?
+				await project.restoreInstallState();
 				await project.install({ cache, report });
 			}
 		);
@@ -87,15 +90,18 @@ function deduplicate(project: Project, report: StreamReport) {
 		if (locatorHashes !== undefined && locatorHashes.size > 1) {
 			const candidates = Array.from(locatorHashes)
 				.map(locatorHash => {
-					const pkg = project.storedPackages.get(locatorHash)!;
-					if (structUtils.isVirtualLocator(pkg)) {
+					// TODO: why would this be undefined if the locatorHashes come from idents
+					// that are from storeProjects?
+					const pkg = project.storedPackages.get(locatorHash);
+					if (pkg !== undefined && structUtils.isVirtualLocator(pkg)) {
 						const sourceLocator = structUtils.devirtualizeLocator(pkg);
 						return project.storedPackages.get(sourceLocator.locatorHash)!;
 					}
 
 					return pkg;
 				})
-				.filter(sourcePackage => {
+				.filter((sourcePackage): sourcePackage is Package => {
+					if (sourcePackage === undefined) return false;
 					if (sourcePackage.version === null) return false;
 
 					return semver.satisfies(sourcePackage.version, semverMatch[1]);
