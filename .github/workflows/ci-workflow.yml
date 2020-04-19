@@ -13,16 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: "Use Node.js 10.x"
+      - name: "Use Node.js 12.x"
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
+          node-version: "12.x"
 
-      - name: 'Check that the Yarn files don''t change on new installs (fix w/ "yarn install")'
+      - name: "Check that the Yarn files don't change on new installs (fix w/ `yarn install`)"
         run: |
           yarn --immutable --immutable-cache
-        env:
-          YARN_ENABLE_NETWORK: 0
 
       - name: "Check that the cache files are consistent with their remote sources"
         run: |
@@ -41,7 +39,7 @@ jobs:
           github.event.pull_request != ''
       - name: "Check that the code is formatted"
         run: |
-          yarn format:files --chec 
+          yarn format:files --check
 
   acceptance:
     strategy:
@@ -65,6 +63,9 @@ jobs:
         uses: actions/setup-node@master
         with:
           version: ${{matrix.node}}.x
+
+      - name: "Install dependencies"
+        run: yarn
 
       - name: "Build the plugin"
         run: |
