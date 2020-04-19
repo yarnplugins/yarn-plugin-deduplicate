@@ -29,6 +29,8 @@ export default class DeduplicateCommand extends BaseCommand {
 		);
 		const { project } = await Project.find(configuration, this.context.cwd);
 
+		await project.restoreInstallState();
+
 		const deduplicateReport = await StreamReport.start(
 			{
 				configuration,
@@ -52,8 +54,6 @@ export default class DeduplicateCommand extends BaseCommand {
 				includeLogs: true
 			},
 			async (report: StreamReport) => {
-				// TODO: what does this do and where should I invoke it?
-				await project.restoreInstallState();
 				await project.install({ cache, report });
 			}
 		);

@@ -1,58 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fixtures fixture test-a 1`] = `
+exports[`fixtures fixture test-a: git-diff 1`] = `
 "diff --git a/.pnp.js b/.pnp.js
-index 9c1636d..b9d7afd 100755
+index 91dfda1..b6ec5f1 100755
 --- a/.pnp.js
 +++ b/.pnp.js
-@@ -51,19 +51,12 @@ function $$SETUP_STATE(hydrateRuntimeState) {
+@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
+     \\"fallbackPool\\": [
+       [
+         \\"@babel/runtime\\",
+-        \\"npm:7.5.0\\"
++        \\"npm:7.6.0\\"
+       ],
+       [
+         \\"@testing-library/dom\\",
+@@ -45,21 +45,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
          [null, {
            \\"packageLocation\\": \\"./\\",
            \\"packageDependencies\\": [
 -            [\\"@babel/runtime\\", \\"npm:7.5.0\\"],
 +            [\\"@babel/runtime\\", \\"npm:7.6.0\\"],
              [\\"@testing-library/dom\\", \\"npm:6.2.0\\"]
-           ]
+           ],
+           \\"linkType\\": \\"SOFT\\",
          }]
        ]],
        [\\"@babel/runtime\\", [
 -        [\\"npm:7.5.0\\", {
--          \\"packageLocation\\": \\"./.yarn/cache/@babel-runtime-npm-7.5.0-7f6c1aead4.zip/node_modules/@babel/runtime/\\",
+-          \\"packageLocation\\": \\"./.yarn/cache/@babel-runtime-npm-7.5.0-40b4260c9d-2.zip/node_modules/@babel/runtime/\\",
 -          \\"packageDependencies\\": [
 -            [\\"@babel/runtime\\", \\"npm:7.5.0\\"],
 -            [\\"regenerator-runtime\\", \\"npm:0.13.3\\"]
--          ]
+-          ],
+-          \\"linkType\\": \\"HARD\\",
 -        }],
          [\\"npm:7.6.0\\", {
-           \\"packageLocation\\": \\"./.yarn/cache/@babel-runtime-npm-7.6.0-b4d272f528.zip/node_modules/@babel/runtime/\\",
+           \\"packageLocation\\": \\"./.yarn/cache/@babel-runtime-npm-7.6.0-9739cfe9fc-2.zip/node_modules/@babel/runtime/\\",
            \\"packageDependencies\\": [
-@@ -198,7 +191,7 @@ function $$SETUP_STATE(hydrateRuntimeState) {
+@@ -208,7 +200,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
            \\"packageLocation\\": \\"./\\",
            \\"packageDependencies\\": [
              [\\"before\\", \\"workspace:.\\"],
 -            [\\"@babel/runtime\\", \\"npm:7.5.0\\"],
 +            [\\"@babel/runtime\\", \\"npm:7.6.0\\"],
              [\\"@testing-library/dom\\", \\"npm:6.2.0\\"]
-           ]
-         }]
-diff --git a/.yarn/cache/@babel-runtime-npm-7.5.0-7f6c1aead4.zip b/.yarn/cache/@babel-runtime-npm-7.5.0-7f6c1aead4.zip
+           ],
+           \\"linkType\\": \\"SOFT\\",
+diff --git a/.yarn/cache/@babel-runtime-npm-7.5.0-40b4260c9d-2.zip b/.yarn/cache/@babel-runtime-npm-7.5.0-40b4260c9d-2.zip
 deleted file mode 100644
-index 075037b..0000000
-Binary files a/.yarn/cache/@babel-runtime-npm-7.5.0-7f6c1aead4.zip and /dev/null differ
+index 3bfb843..0000000
+Binary files a/.yarn/cache/@babel-runtime-npm-7.5.0-40b4260c9d-2.zip and /dev/null differ
 diff --git a/yarn.lock b/yarn.lock
-index 9b3bc72..358b9cb 100644
+index 8ad3f2f..6724d5e 100644
 --- a/yarn.lock
 +++ b/yarn.lock
 @@ -4,16 +4,7 @@
  __metadata:
-   version: 3
+   version: 4
  
 -\\"@babel/runtime@npm:^7.5.0\\":
 -  version: 7.5.0
 -  resolution: \\"@babel/runtime@npm:7.5.0\\"
 -  dependencies:
--    regenerator-runtime: \\"npm:^0.13.2\\"
--  checksum: c853ae00d007fc1f5bb0cf1de80abebf0cade41b1eff8e81641b5f145493c986b4e31d6f7c3485c4cb890212373d7145481e033a0aad406e09027cc6df3075f9
+-    regenerator-runtime: ^0.13.2
+-  checksum: 2/f726c04816b68bfc6be43b4dba662559f84cf56b8bd4f5efb5a6868a913d073c41d68f03043fa280d3ea3e14ecd339511992cbcc56f3ca48621978a915a0d8df
 -  languageName: node
 -  linkType: hard
 -
@@ -64,17 +75,19 @@ index 9b3bc72..358b9cb 100644
 "
 `;
 
-exports[`fixtures fixture test-a 2`] = `
-"➤ YN0000: ┌ deduplication step
-➤ YN0000: │ @babel/runtime@npm:^7.5.0 can be deduplicated from runtime@7.5.0 to runtime@7.6.0
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Resolution step
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Fetch step
-➤ YN0019: │ @babel-runtime-npm-7.5.0-7f6c1aead4.zip appears to be unused - removing
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Link step
-➤ YN0000: └ Completed
-➤ YN0000: Done
+exports[`fixtures fixture test-a: stderr 1`] = `""`;
+
+exports[`fixtures fixture test-a: stdout 1`] = `
+"[94m➤[39m [90mYN0000[39m: ┌ deduplication step
+[94m➤[39m YN0000: │ @babel/runtime@npm:^7.5.0 can be deduplicated from runtime@7.5.0 to runtime@7.6.0
+[94m➤[39m [90mYN0000[39m: └ Completed
+[94m➤[39m [90mYN0000[39m: ┌ Resolution step
+[94m➤[39m [90mYN0000[39m: └ Completed
+[94m➤[39m [90mYN0000[39m: ┌ Fetch step
+[94m➤[39m ]8;;https://yarnpkg.com/advanced/error-codes#yn0019---unused_cache_entry\\\\YN0019]8;;\\\\: │ [35m@babel-runtime-npm-7.5.0-40b4260c9d-2.zip[39m appears to be unused - removing
+[94m➤[39m [90mYN0000[39m: └ Completed
+[94m➤[39m [90mYN0000[39m: ┌ Link step
+[94m➤[39m [90mYN0000[39m: └ Completed
+[94m➤[39m YN0000: Done
 "
 `;

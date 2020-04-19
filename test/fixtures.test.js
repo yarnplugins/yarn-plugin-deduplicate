@@ -19,14 +19,11 @@ describe("fixtures", () => {
 		await fs.mkdir(tmpdir);
 		await copyDir(fixturePath, tmpdir);
 		await fs.copyFile(
-			path.resolve(__dirname, "../.yarn/releases/yarn-sources.js"),
+			path.resolve(__dirname, "../.yarn/releases/yarn-2.0.0-rc.32.js"),
 			path.join(tmpdir, "yarn.js")
 		);
 		await fs.copyFile(
-			path.resolve(
-				__dirname,
-				"../.yarn/plugins/@yarnpkg/plugin-deduplicate.js"
-			),
+			path.resolve(__dirname, "../bundles/@yarnpkg/plugin-deduplicate.js"),
 			path.join(tmpdir, "yarn-deduplicate.js")
 		);
 		await fs.writeFile(
@@ -48,15 +45,14 @@ yarnPath: yarn.js`,
 		childProcess.execSync(`git commit -m 'Initial commit'`, { cwd: tmpdir });
 
 		const { stdout, stderr } = childProcess.spawnSync(`yarn`, [`deduplicate`], {
-			cwd: tmpdir,
-			env: {}
+			cwd: tmpdir
 		});
-		const diff = childProcess
+		expect(stderr.toString("utf8")).toMatchSnapshot("stderr");
+		expect(stdout.toString("utf8")).toMatchSnapshot("stdout");
+		const gitDiff = childProcess
 			.execSync(`git diff --patch`, { cwd: tmpdir })
 			.toString("utf8");
-
-		expect(diff).toMatchSnapshot();
-		expect((await stdout).toString("utf8")).toMatchSnapshot();
+		expect(gitDiff).toMatchSnapshot("git-diff");
 	});
 });
 
