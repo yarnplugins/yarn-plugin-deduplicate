@@ -13,7 +13,7 @@ describe("fixtures", () => {
 			os.tmpdir(),
 			`yarn-deduplicate-test-${fixtureName}`
 		);
-		console.log(tmpdir)
+		console.log(tmpdir);
 
 		// prepare
 		rimraf.sync(tmpdir);
@@ -24,16 +24,12 @@ describe("fixtures", () => {
 			path.join(tmpdir, "yarn.js")
 		);
 		await fs.copyFile(
-			path.resolve(
-				__dirname,
-				"../bundles/@yarnpkg/plugin-deduplicate.js"
-			),
+			path.resolve(__dirname, "../bundles/@yarnpkg/plugin-deduplicate.js"),
 			path.join(tmpdir, "yarn-deduplicate.js")
 		);
 		await fs.writeFile(
 			path.join(tmpdir, ".yarnrc.yml"),
 			`
-enableTimers: false
 plugins:
   - yarn-deduplicate.js
 
@@ -50,7 +46,15 @@ yarnPath: yarn.js`,
 
 		const { stdout, stderr } = childProcess.spawnSync(`yarn`, [`deduplicate`], {
 			cwd: tmpdir,
-			// env: {}
+			env: {
+				...process.env,
+				// see https://github.com/yarnpkg/berry/blob/master/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
+				// copied from https://github.com/yarnpkg/berry/blob/1d98fe7d9ec67aba890cb1209c834a39ca3eba94/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
+				YARN_ENABLE_COLORS: "0",
+				YARN_ENABLE_INLINE_BUILDS: "false",
+				YARN_ENABLE_PROGRESS_BARS: "false",
+				YARN_ENABLE_TIMERS: "false"
+			}
 		});
 		const diff = childProcess
 			.execSync(`git diff --patch`, { cwd: tmpdir })
