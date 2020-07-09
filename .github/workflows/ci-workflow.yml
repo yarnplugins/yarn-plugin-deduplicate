@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - name: "Use Node.js 10.x"
+      - name: "Use Node.js 14.x"
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
+          node-version: '14.x'
 
       - name: 'Check that the Yarn files don''t change on new installs (fix w/ "yarn install")'
         run: |
@@ -41,7 +41,7 @@ jobs:
           github.event.pull_request != ''
       - name: "Check that the code is formatted"
         run: |
-          yarn format:files --chec 
+          yarn format:files --check 
 
   acceptance:
     strategy:
@@ -50,6 +50,7 @@ jobs:
         node:
           - 10
           - 12
+          - 14
         platform:
           - ubuntu-latest
           - windows-latest
