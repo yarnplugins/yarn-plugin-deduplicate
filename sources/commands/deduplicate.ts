@@ -6,7 +6,8 @@ import {
 	Project,
 	IdentHash,
 	StreamReport,
-	MessageName
+	MessageName,
+	Package
 } from "@yarnpkg/core";
 import { structUtils } from "@yarnpkg/core";
 import { Command } from "clipanion";
@@ -90,9 +91,10 @@ function deduplicate(project: Project, report: StreamReport) {
 				.map(locatorHash => {
 					const pkg = project.storedPackages.get(locatorHash);
 					if (pkg === undefined) {
-						throw new TypeError(
+						console.warn(
 							`Can't find package for locator hash '${locatorHash}'`
 						);
+						return null;
 					}
 					if (structUtils.isVirtualLocator(pkg)) {
 						const sourceLocator = structUtils.devirtualizeLocator(pkg);
@@ -101,7 +103,8 @@ function deduplicate(project: Project, report: StreamReport) {
 
 					return pkg;
 				})
-				.filter(sourcePackage => {
+				.filter((sourcePackage): sourcePackage is Package => {
+					if (sourcePackage === null) return false;
 					if (sourcePackage.version === null) return false;
 
 					return semver.satisfies(sourcePackage.version, semverMatch[1]);
