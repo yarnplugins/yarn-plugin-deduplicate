@@ -1,5 +1,0 @@
-{
-  "name": "eslint",
-  "version": "6.3.0-pnpify",
-  "main": "lib/api.js"
-}
