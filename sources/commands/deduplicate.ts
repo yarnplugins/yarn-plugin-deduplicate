@@ -88,7 +88,12 @@ function deduplicate(project: Project, report: StreamReport) {
 		if (locatorHashes !== undefined && locatorHashes.size > 1) {
 			const candidates = Array.from(locatorHashes)
 				.map(locatorHash => {
-					const pkg = project.storedPackages.get(locatorHash)!;
+					const pkg = project.storedPackages.get(locatorHash);
+					if (pkg === undefined) {
+						throw new TypeError(
+							`Can't find package for locator hash '${locatorHash}'`
+						);
+					}
 					if (structUtils.isVirtualLocator(pkg)) {
 						const sourceLocator = structUtils.devirtualizeLocator(pkg);
 						return project.storedPackages.get(sourceLocator.locatorHash)!;

@@ -13,6 +13,7 @@ describe("fixtures", () => {
 			os.tmpdir(),
 			`yarn-deduplicate-test-${fixtureName}`
 		);
+		console.log(tmpdir)
 
 		// prepare
 		rimraf.sync(tmpdir);
@@ -25,7 +26,7 @@ describe("fixtures", () => {
 		await fs.copyFile(
 			path.resolve(
 				__dirname,
-				"../.yarn/plugins/@yarnpkg/plugin-deduplicate.js"
+				"../bundles/@yarnpkg/plugin-deduplicate.js"
 			),
 			path.join(tmpdir, "yarn-deduplicate.js")
 		);
@@ -49,7 +50,7 @@ yarnPath: yarn.js`,
 
 		const { stdout, stderr } = childProcess.spawnSync(`yarn`, [`deduplicate`], {
 			cwd: tmpdir,
-			env: {}
+			// env: {}
 		});
 		const diff = childProcess
 			.execSync(`git diff --patch`, { cwd: tmpdir })
@@ -57,6 +58,7 @@ yarnPath: yarn.js`,
 
 		expect(diff).toMatchSnapshot();
 		expect((await stdout).toString("utf8")).toMatchSnapshot();
+		expect((await stderr).toString("utf8")).toMatchSnapshot();
 	});
 });
 

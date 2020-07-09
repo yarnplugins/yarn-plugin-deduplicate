@@ -78,3 +78,5 @@ exports[`fixtures fixture test-a 2`] = `
 ➤ YN0000: Done
 "
 `;
+
+exports[`fixtures fixture test-a 3`] = `""`;
