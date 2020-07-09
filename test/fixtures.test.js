@@ -46,7 +46,7 @@ yarnPath: yarn.js`,
 		const { stdout, stderr } = childProcess.spawnSync(`yarn`, [`deduplicate`], {
 			cwd: tmpdir,
 			env: {
-				...process.env,
+				PATH: process.env.PATH,
 				// see https://github.com/yarnpkg/berry/blob/master/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
 				// copied from https://github.com/yarnpkg/berry/blob/1d98fe7d9ec67aba890cb1209c834a39ca3eba94/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
 				YARN_ENABLE_COLORS: "0",
