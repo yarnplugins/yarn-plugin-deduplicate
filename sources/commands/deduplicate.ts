@@ -6,7 +6,8 @@ import {
 	Project,
 	IdentHash,
 	StreamReport,
-	MessageName
+	MessageName,
+	Package
 } from "@yarnpkg/core";
 import { structUtils } from "@yarnpkg/core";
 import { Command } from "clipanion";
@@ -28,6 +29,8 @@ export default class DeduplicateCommand extends BaseCommand {
 			this.context.plugins
 		);
 		const { project } = await Project.find(configuration, this.context.cwd);
+
+		await project.restoreInstallState();
 
 		const deduplicateReport = await StreamReport.start(
 			{
@@ -88,7 +91,12 @@ function deduplicate(project: Project, report: StreamReport) {
 		if (locatorHashes !== undefined && locatorHashes.size > 1) {
 			const candidates = Array.from(locatorHashes)
 				.map(locatorHash => {
-					const pkg = project.storedPackages.get(locatorHash)!;
+					const pkg = project.storedPackages.get(locatorHash);
+					if (pkg === undefined) {
+						throw new TypeError(
+							`Can't find package for locator hash '${locatorHash}'`
+						);
+					}
 					if (structUtils.isVirtualLocator(pkg)) {
 						const sourceLocator = structUtils.devirtualizeLocator(pkg);
 						return project.storedPackages.get(sourceLocator.locatorHash)!;
