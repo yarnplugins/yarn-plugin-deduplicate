@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`fixtures fixture test-a 1`] = `
+"➤ YN0000: ┌ deduplication step
+➤ YN0000: │ @babel/runtime@npm:^7.5.0 can be deduplicated from runtime@7.5.0 to runtime@7.6.0
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Resolution step
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0019: │ @babel-runtime-npm-7.5.0-40b4260c9d-f726c04816.zip appears to be unused - removing
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed
+➤ YN0000: Done
+"
+`;
+
+exports[`fixtures fixture test-a 2`] = `""`;
+
+exports[`fixtures fixture test-a 3`] = `
 "diff --git a/.pnp.js b/.pnp.js
 index c2d421e..552ad8d 100755
 --- a/.pnp.js
@@ -74,20 +91,3 @@ index 51b0053..7755470 100644
    dependencies:
 "
 `;
-
-exports[`fixtures fixture test-a 2`] = `
-"➤ YN0000: ┌ deduplication step
-➤ YN0000: │ @babel/runtime@npm:^7.5.0 can be deduplicated from runtime@7.5.0 to runtime@7.6.0
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Resolution step
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Fetch step
-➤ YN0019: │ @babel-runtime-npm-7.5.0-40b4260c9d-f726c04816.zip appears to be unused - removing
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Link step
-➤ YN0000: └ Completed
-➤ YN0000: Done
-"
-`;
-
-exports[`fixtures fixture test-a 3`] = `""`;

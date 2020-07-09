@@ -55,13 +55,14 @@ yarnPath: yarn.js`,
 				YARN_ENABLE_TIMERS: "false"
 			}
 		});
+		expect((await stdout).toString("utf8")).toMatchSnapshot();
+		expect((await stderr).toString("utf8")).toMatchSnapshot();
+
 		const diff = childProcess
 			.execSync(`git diff --patch`, { cwd: tmpdir })
 			.toString("utf8");
 
 		expect(diff).toMatchSnapshot();
-		expect((await stdout).toString("utf8")).toMatchSnapshot();
-		expect((await stderr).toString("utf8")).toMatchSnapshot();
 	});
 });
 
