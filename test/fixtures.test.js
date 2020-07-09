@@ -19,7 +19,7 @@ describe("fixtures", () => {
 		await fs.mkdir(tmpdir);
 		await copyDir(fixturePath, tmpdir);
 		await fs.copyFile(
-			path.resolve(__dirname, "../.yarn/releases/yarn-sources.js"),
+			path.resolve(__dirname, "../.yarn/releases/yarn-2.x.cjs"),
 			path.join(tmpdir, "yarn.js")
 		);
 		await fs.copyFile(
