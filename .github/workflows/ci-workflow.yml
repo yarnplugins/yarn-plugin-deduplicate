@@ -69,7 +69,6 @@ jobs:
 
       - name: "Build the plugin"
         run: |
-          set -e
           yarn build
 
       - name: "Run the integration tests"
