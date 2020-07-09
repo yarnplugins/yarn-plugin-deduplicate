@@ -30,6 +30,8 @@ export default class DeduplicateCommand extends BaseCommand {
 		);
 		const { project } = await Project.find(configuration, this.context.cwd);
 
+		await project.restoreInstallState();
+
 		const deduplicateReport = await StreamReport.start(
 			{
 				configuration,
@@ -91,10 +93,9 @@ function deduplicate(project: Project, report: StreamReport) {
 				.map(locatorHash => {
 					const pkg = project.storedPackages.get(locatorHash);
 					if (pkg === undefined) {
-						console.warn(
+						throw new TypeError(
 							`Can't find package for locator hash '${locatorHash}'`
 						);
-						return null;
 					}
 					if (structUtils.isVirtualLocator(pkg)) {
 						const sourceLocator = structUtils.devirtualizeLocator(pkg);
@@ -103,8 +104,7 @@ function deduplicate(project: Project, report: StreamReport) {
 
 					return pkg;
 				})
-				.filter((sourcePackage): sourcePackage is Package => {
-					if (sourcePackage === null) return false;
+				.filter(sourcePackage => {
 					if (sourcePackage.version === null) return false;
 
 					return semver.satisfies(sourcePackage.version, semverMatch[1]);
