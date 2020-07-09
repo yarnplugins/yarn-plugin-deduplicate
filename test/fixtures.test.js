@@ -41,6 +41,7 @@ yarnPath: yarn.js`,
 			cwd: tmpdir
 		});
 		childProcess.execSync(`git add -A`, { cwd: tmpdir });
+		console.log(tmpdir)
 		childProcess.execSync(`git commit -m 'Initial commit'`, { cwd: tmpdir });
 
 		const { stdout, stderr } = childProcess.spawnSync(`yarn`, [`deduplicate`], {
