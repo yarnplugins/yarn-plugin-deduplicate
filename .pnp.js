@@ -50,10 +50,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:2.1.1"
       ],
       [
-        "@yarnpkg/pnpify",
-        "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0"
-      ],
-      [
         "clipanion",
         "npm:2.4.2"
       ],
@@ -94,7 +90,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/builder", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0"],
             ["@yarnpkg/cli", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.1"],
             ["@yarnpkg/core", "npm:2.1.1"],
-            ["@yarnpkg/pnpify", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0"],
             ["clipanion", "npm:2.4.2"],
             ["eslint", "npm:6.8.0"],
             ["jest", "npm:24.9.0"],
@@ -1601,27 +1596,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.19"],
             ["tslib", "npm:1.13.0"],
             ["typescript", null]
-          ],
-          "packagePeers": [
-            "eslint",
-            "typescript"
-          ],
-          "linkType": "HARD",
-        }],
-        ["virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0", {
-          "packageLocation": "./.yarn/$$virtual/@yarnpkg-pnpify-virtual-9139122cc7/0/cache/@yarnpkg-pnpify-npm-2.1.0-ba7c47ca3b-334ce4cc6c.zip/node_modules/@yarnpkg/pnpify/",
-          "packageDependencies": [
-            ["@yarnpkg/pnpify", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0"],
-            ["@yarnpkg/core", "npm:2.1.1"],
-            ["@yarnpkg/fslib", "npm:2.1.0"],
-            ["@yarnpkg/parsers", "npm:2.1.0"],
-            ["chalk", "npm:3.0.0"],
-            ["clipanion", "npm:2.4.2"],
-            ["comment-json", "npm:2.4.2"],
-            ["eslint", "npm:6.8.0"],
-            ["lodash", "npm:4.17.19"],
-            ["tslib", "npm:1.13.0"],
-            ["typescript", "patch:typescript@npm%3A3.9.6#builtin<compat/typescript>::version=3.9.6&hash=5b02a2"]
           ],
           "packagePeers": [
             "eslint",
@@ -8575,7 +8549,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/builder", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0"],
             ["@yarnpkg/cli", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.1"],
             ["@yarnpkg/core", "npm:2.1.1"],
-            ["@yarnpkg/pnpify", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0"],
             ["clipanion", "npm:2.4.2"],
             ["eslint", "npm:6.8.0"],
             ["jest", "npm:24.9.0"],
