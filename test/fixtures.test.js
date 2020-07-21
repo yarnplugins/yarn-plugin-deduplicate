@@ -8,13 +8,12 @@ describe("fixtures", () => {
 	const fixtureDirPath = path.resolve(__dirname, "./fixtures/");
 
 	test.each(readdirSync(fixtureDirPath))("fixture %s", async fixtureName => {
-		const yarnCmd = os.platform() === "win32" ? "yarn.cmd" : "yarn";
 		const fixturePath = path.join(fixtureDirPath, fixtureName);
 		const tmpdir = path.join(
 			os.tmpdir(),
 			`yarn-deduplicate-test-${fixtureName}`
 		);
-		console.log(os.platform(), yarnCmd);
+		const yarnCmd = path.join(tmpdir, "yarn.js");
 
 		// prepare
 		rimraf.sync(tmpdir);
@@ -22,7 +21,7 @@ describe("fixtures", () => {
 		await copyDir(fixturePath, tmpdir);
 		await fs.copyFile(
 			path.resolve(__dirname, "../.yarn/releases/yarn-2.x.cjs"),
-			path.join(tmpdir, "yarn.js")
+			yarnCmd
 		);
 		await fs.copyFile(
 			path.resolve(__dirname, "../bundles/@yarnpkg/plugin-deduplicate.js"),
