@@ -37,9 +37,6 @@ yarnPath: yarn.js`,
 			{ encoding: "utf8" }
 		);
 		childProcess.execSync(`git init`, { cwd: tmpdir });
-		// Ignore file permissions
-		// yarn's .pnp file has 0775 permissions on unix but 0644 on windows
-		childProcess.execSync(`git config core.fileMode false`, { cwd: tmpdir });
 		childProcess.execSync(`git config user.name "jest"`, { cwd: tmpdir });
 		childProcess.execSync(`git config user.email "jest@example.com"`, {
 			cwd: tmpdir
@@ -68,7 +65,9 @@ yarnPath: yarn.js`,
 		expect(stderr.toString("utf8")).toMatchSnapshot();
 
 		const diff = childProcess
-			.execSync(`git diff --patch`, { cwd: tmpdir })
+			// yarn's .pnp file has 0644 under windows but 0755 under unix
+			// We don't care about those changes her.
+			.execSync(`git -c core.fileMode=false diff --patch`, { cwd: tmpdir })
 			.toString("utf8");
 
 		expect(diff).toMatchSnapshot();
