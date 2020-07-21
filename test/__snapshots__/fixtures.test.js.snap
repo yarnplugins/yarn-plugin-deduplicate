@@ -19,9 +19,7 @@ exports[`fixtures fixture test-a 2`] = `""`;
 
 exports[`fixtures fixture test-a 3`] = `
 "diff --git a/.pnp.js b/.pnp.js
-old mode 100644
-new mode 100755
-index c2d421e..552ad8d
+index c2d421e..552ad8d 100755
 --- a/.pnp.js
 +++ b/.pnp.js
 @@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {

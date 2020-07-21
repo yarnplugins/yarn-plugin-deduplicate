@@ -37,6 +37,9 @@ yarnPath: yarn.js`,
 			{ encoding: "utf8" }
 		);
 		childProcess.execSync(`git init`, { cwd: tmpdir });
+		// Ignore file permissions
+		// yarn's .pnp file has 0775 permissions on unix but 0644 on windows
+		childProcess.execSync(`git config core.fileMode false`, { cwd: tmpdir });
 		childProcess.execSync(`git config user.name "jest"`, { cwd: tmpdir });
 		childProcess.execSync(`git config user.email "jest@example.com"`, {
 			cwd: tmpdir
