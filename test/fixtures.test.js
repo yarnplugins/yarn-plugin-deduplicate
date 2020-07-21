@@ -45,8 +45,8 @@ yarnPath: yarn.js`,
 		childProcess.execSync(`git commit -m "Initial commit"`, { cwd: tmpdir });
 
 		const { error, stdout, stderr } = childProcess.spawnSync(
-			yarnCmd,
-			[`deduplicate`],
+			process.execPath,
+			[yarnCmd, `deduplicate`],
 			{
 				cwd: tmpdir,
 				env: {
