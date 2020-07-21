@@ -53,7 +53,8 @@ yarnPath: yarn.js`,
 				YARN_ENABLE_INLINE_BUILDS: "false",
 				YARN_ENABLE_PROGRESS_BARS: "false",
 				YARN_ENABLE_TIMERS: "false"
-			}
+			},
+			shell: true
 		});
 		expect(stdout.toString("utf8")).toMatchSnapshot();
 		expect(stderr.toString("utf8")).toMatchSnapshot();
