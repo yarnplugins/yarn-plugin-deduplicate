@@ -42,6 +42,9 @@ yarnPath: yarn.js`,
 			cwd: tmpdir
 		});
 		childProcess.execSync(`git add -A`, { cwd: tmpdir });
+		// yarn's .pnp file has 0644 under windows but 0755 under unix in git diff
+		// We don't care about those changes her.
+		childProcess.execSync(`git update-index --chmod=+x .pnp.js`, { cwd: tmpdir });
 		childProcess.execSync(`git commit -m "Initial commit"`, { cwd: tmpdir });
 
 		const { error, stdout, stderr } = childProcess.spawnSync(
@@ -64,8 +67,6 @@ yarnPath: yarn.js`,
 		expect(stdout.toString("utf8")).toMatchSnapshot();
 		expect(stderr.toString("utf8")).toMatchSnapshot();
 
-		// yarn's .pnp file has 0644 under windows but 0755 under unix
-		// We don't care about those changes her.
 		await fs.chmod(path.join(tmpdir, ".pnp.js"), 0o755);
 		const diff = childProcess
 			.execSync(`git diff --patch`, { cwd: tmpdir })
