@@ -43,19 +43,23 @@ yarnPath: yarn.js`,
 		childProcess.execSync(`git add -A`, { cwd: tmpdir });
 		childProcess.execSync(`git commit -m "Initial commit"`, { cwd: tmpdir });
 
-		const { stdout, stderr } = childProcess.spawnSync(`yarn`, [`deduplicate`], {
-			cwd: tmpdir,
-			env: {
-				PATH: process.env.PATH,
-				// see https://github.com/yarnpkg/berry/blob/master/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
-				// copied from https://github.com/yarnpkg/berry/blob/1d98fe7d9ec67aba890cb1209c834a39ca3eba94/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
-				YARN_ENABLE_COLORS: "0",
-				YARN_ENABLE_INLINE_BUILDS: "false",
-				YARN_ENABLE_PROGRESS_BARS: "false",
-				YARN_ENABLE_TIMERS: "false"
-			},
-			shell: true
-		});
+		const { error, stdout, stderr } = childProcess.spawnSync(
+			`yarn`,
+			[`deduplicate`],
+			{
+				cwd: tmpdir,
+				env: {
+					PATH: process.env.PATH,
+					// see https://github.com/yarnpkg/berry/blob/master/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
+					// copied from https://github.com/yarnpkg/berry/blob/1d98fe7d9ec67aba890cb1209c834a39ca3eba94/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
+					YARN_ENABLE_COLORS: "0",
+					YARN_ENABLE_INLINE_BUILDS: "false",
+					YARN_ENABLE_PROGRESS_BARS: "false",
+					YARN_ENABLE_TIMERS: "false"
+				}
+			}
+		);
+		expect(error).toBe(undefined);
 		expect(stdout.toString("utf8")).toMatchSnapshot();
 		expect(stderr.toString("utf8")).toMatchSnapshot();
 
