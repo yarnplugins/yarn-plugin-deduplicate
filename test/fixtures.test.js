@@ -13,6 +13,7 @@ describe("fixtures", () => {
 			os.tmpdir(),
 			`yarn-deduplicate-test-${fixtureName}`
 		);
+		const yarnCmd = path.join(tmpdir, "yarn.js");
 
 		// prepare
 		rimraf.sync(tmpdir);
@@ -20,7 +21,7 @@ describe("fixtures", () => {
 		await copyDir(fixturePath, tmpdir);
 		await fs.copyFile(
 			path.resolve(__dirname, "../.yarn/releases/yarn-2.x.cjs"),
-			path.join(tmpdir, "yarn.js")
+			yarnCmd
 		);
 		await fs.copyFile(
 			path.resolve(__dirname, "../bundles/@yarnpkg/plugin-deduplicate.js"),
@@ -41,23 +42,32 @@ yarnPath: yarn.js`,
 			cwd: tmpdir
 		});
 		childProcess.execSync(`git add -A`, { cwd: tmpdir });
+		// yarn's .pnp file has 0644 under windows but 0755 under unix in git diff
+		// We don't care about those changes her.
+		childProcess.execSync(`git update-index --chmod=+x .pnp.js`, { cwd: tmpdir });
 		childProcess.execSync(`git commit -m "Initial commit"`, { cwd: tmpdir });
 
-		const { stdout, stderr } = childProcess.spawnSync(`yarn`, [`deduplicate`], {
-			cwd: tmpdir,
-			env: {
-				PATH: process.env.PATH,
-				// see https://github.com/yarnpkg/berry/blob/master/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
-				// copied from https://github.com/yarnpkg/berry/blob/1d98fe7d9ec67aba890cb1209c834a39ca3eba94/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
-				YARN_ENABLE_COLORS: "0",
-				YARN_ENABLE_INLINE_BUILDS: "false",
-				YARN_ENABLE_PROGRESS_BARS: "false",
-				YARN_ENABLE_TIMERS: "false"
+		const { error, stdout, stderr } = childProcess.spawnSync(
+			process.execPath,
+			[yarnCmd, `deduplicate`],
+			{
+				cwd: tmpdir,
+				env: {
+					PATH: process.env.PATH,
+					// see https://github.com/yarnpkg/berry/blob/master/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
+					// copied from https://github.com/yarnpkg/berry/blob/1d98fe7d9ec67aba890cb1209c834a39ca3eba94/packages/acceptance-tests/pkg-tests-core/sources/utils/makeTemporaryEnv.ts#L45-L57
+					YARN_ENABLE_COLORS: "0",
+					YARN_ENABLE_INLINE_BUILDS: "false",
+					YARN_ENABLE_PROGRESS_BARS: "false",
+					YARN_ENABLE_TIMERS: "false"
+				}
 			}
-		});
-		expect((await stdout).toString("utf8")).toMatchSnapshot();
-		expect((await stderr).toString("utf8")).toMatchSnapshot();
+		);
+		expect(error).toBe(undefined);
+		expect(stdout.toString("utf8")).toMatchSnapshot();
+		expect(stderr.toString("utf8")).toMatchSnapshot();
 
+		await fs.chmod(path.join(tmpdir, ".pnp.js"), 0o755);
 		const diff = childProcess
 			.execSync(`git diff --patch`, { cwd: tmpdir })
 			.toString("utf8");

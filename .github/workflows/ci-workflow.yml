@@ -12,6 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+        with:
+          # 0 indicates all history for `yarn version check`
+          fetch-depth: 0
 
       - name: "Use Node.js 14.x"
         uses: actions/setup-node@v1
