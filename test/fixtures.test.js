@@ -14,6 +14,7 @@ describe("fixtures", () => {
 			os.tmpdir(),
 			`yarn-deduplicate-test-${fixtureName}`
 		);
+		console.log(os.platform(), yarnCmd);
 
 		// prepare
 		rimraf.sync(tmpdir);
