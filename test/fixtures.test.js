@@ -64,10 +64,11 @@ yarnPath: yarn.js`,
 		expect(stdout.toString("utf8")).toMatchSnapshot();
 		expect(stderr.toString("utf8")).toMatchSnapshot();
 
+		// yarn's .pnp file has 0644 under windows but 0755 under unix
+		// We don't care about those changes her.
+		await fs.chmod(path.join(tmpdir, ".pnp.js"), 0o755);
 		const diff = childProcess
-			// yarn's .pnp file has 0644 under windows but 0755 under unix
-			// We don't care about those changes her.
-			.execSync(`git -c core.fileMode=false diff --patch`, { cwd: tmpdir })
+			.execSync(`git diff --patch`, { cwd: tmpdir })
 			.toString("utf8");
 
 		expect(diff).toMatchSnapshot();
