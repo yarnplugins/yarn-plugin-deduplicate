@@ -44,7 +44,9 @@ yarnPath: yarn.js`,
 		childProcess.execSync(`git add -A`, { cwd: tmpdir });
 		// yarn's .pnp file has 0644 under windows but 0755 under unix in git diff
 		// We don't care about those changes her.
-		childProcess.execSync(`git update-index --chmod=+x .pnp.js`, { cwd: tmpdir });
+		childProcess.execSync(`git update-index --chmod=+x .pnp.js`, {
+			cwd: tmpdir
+		});
 		childProcess.execSync(`git commit -m "Initial commit"`, { cwd: tmpdir });
 
 		const { error, stdout, stderr } = childProcess.spawnSync(
