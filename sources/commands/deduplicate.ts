@@ -1,6 +1,3 @@
-/**
- * @license MIT
- */
 import { BaseCommand } from "@yarnpkg/cli";
 import {
 	Cache,

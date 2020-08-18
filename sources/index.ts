@@ -1,6 +1,7 @@
 /**
  * @license MIT
  */
+
 import { Plugin } from "@yarnpkg/core";
 
 import deduplicate from "./commands/deduplicate";
