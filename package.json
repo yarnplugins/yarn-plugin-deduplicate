@@ -31,10 +31,5 @@
 		"prettier": "^1.18.2",
 		"rimraf": "^3.0.0",
 		"typescript": "^3.6.2"
-	},
-	"dependenciesMeta": {
-		"@yarnpkg/builder": {
-			"unplugged": true
-		}
 	}
 }

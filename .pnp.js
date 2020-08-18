@@ -1095,7 +1095,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["@yarnpkg/builder", [
         ["virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0", {
-          "packageLocation": "./.yarn/unplugged/@yarnpkg-builder-virtual-2963debc39/node_modules/@yarnpkg/builder/",
+          "packageLocation": "./.yarn/$$virtual/@yarnpkg-builder-virtual-2963debc39/0/cache/@yarnpkg-builder-npm-2.1.0-846f57d5e5-feaa1bbc07.zip/node_modules/@yarnpkg/builder/",
           "packageDependencies": [
             ["@yarnpkg/builder", "virtual:f524ae4311887d4498e25e35d29b1ade258725d97ceb1186cd5bb03c1dada1dbff0f38e9545997b6c8bbdef037b81b9166f9ef17591c6ad9cb836b50840b70f0#npm:2.1.0"],
             ["@babel/core", "npm:7.10.4"],

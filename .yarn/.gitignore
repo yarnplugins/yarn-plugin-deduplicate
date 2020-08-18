@@ -1,3 +1,2 @@
 /install-state.gz
 /unplugged/*
-!/unplugged/@yarnpkg-builder-*
