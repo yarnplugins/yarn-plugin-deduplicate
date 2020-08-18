@@ -1,6 +1,7 @@
 {
 	"name": "yarn-plugin-deduplicate",
 	"version": "0.2.0",
+	"license": "MIT",
 	"private": true,
 	"main": "./sources/index.ts",
 	"dependencies": {
@@ -30,5 +31,10 @@
 		"prettier": "^1.18.2",
 		"rimraf": "^3.0.0",
 		"typescript": "^3.6.2"
+	},
+	"dependenciesMeta": {
+		"@yarnpkg/builder": {
+			"unplugged": true
+		}
 	}
 }
