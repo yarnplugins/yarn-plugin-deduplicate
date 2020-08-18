@@ -7583,6 +7583,9 @@ typescript@^3.6.2:
     rimraf: ^3.0.0
     semver: ^6.3.0
     typescript: ^3.6.2
+  dependenciesMeta:
+    "@yarnpkg/builder":
+      unplugged: true
   languageName: unknown
   linkType: soft
 
