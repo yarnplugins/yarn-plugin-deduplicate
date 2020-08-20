@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-$ yarn plugin import https://raw.githubusercontent.com/eps1lon/yarn-plugin-deduplicate/latest/bin/%40yarnpkg/plugin-deduplicate.js
+$ yarn plugin import https://yarnplugins.com/deduplicate@latest
 ```
 
 ## Usage
